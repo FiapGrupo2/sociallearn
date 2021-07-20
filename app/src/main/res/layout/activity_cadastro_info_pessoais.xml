@@ -69,22 +69,6 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextEmail"
         app:layout_constraintVertical_bias="0.318" />
 
-    <TextView
-        android:id="@+id/textViewNext"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="344dp"
-        android:layout_marginTop="95dp"
-        android:layout_marginEnd="9dp"
-        android:layout_marginBottom="24dp"
-        android:text="próximo >"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.75"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordConfir"
-        app:layout_constraintVertical_bias="0.782" />
-
     <SeekBar
         android:id="@+id/seekBar"
         android:layout_width="402dp"
@@ -240,6 +224,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textViewGenero"
         app:layout_constraintVertical_bias="1.0" />
+
+    <Button
+        android:id="@+id/btnNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="309dp"
+        android:layout_marginTop="57dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="14dp"
+        android:text="próximo >"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextTextPasswordConfir" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
