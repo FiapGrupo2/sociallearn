@@ -1,4 +1,4 @@
-package br.com.example.sociallearn.view
+package br.com.example.sociallearn.view.cadastro
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
