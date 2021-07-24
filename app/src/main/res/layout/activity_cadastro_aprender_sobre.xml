@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.cadastro.CadastroAprenderSobre">
+    tools:context="br.com.fiap.sociallearn.view.cadastro.CadastroAprenderSobre">
 
     <View
         android:id="@+id/divider2"

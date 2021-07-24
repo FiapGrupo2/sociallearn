@@ -1,4 +1,4 @@
-package br.com.example.sociallearn.view.listaConteudo
+package br.com.fiap.sociallearn.view.listaConteudo
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle

@@ -1,4 +1,4 @@
-package br.com.example.sociallearn.viewmodel
+package br.com.fiap.sociallearn.viewmodel
 
 import androidx.lifecycle.ViewModel
 
