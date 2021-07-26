@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cadastro_nav"
+    app:startDestination="@id/cadastroFragment">
+
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroFragment"
+        android:label="CadastroFragment" />
+    <fragment
+        android:id="@+id/cadastroPerfilFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroPerfilFragment"
+        android:label="CadastroPerfilFragment" />
+    <fragment
+        android:id="@+id/cadastroLearnFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroLearnFragment"
+        android:label="CadastroLearnFragment" />
+    <fragment
+        android:id="@+id/cadastroTeachFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroTeachFragment"
+        android:label="CadastroTeachFragment" />
+</navigation>
