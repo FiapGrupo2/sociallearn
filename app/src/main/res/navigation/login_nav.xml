@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/login_nav"
+    app:startDestination="@id/logInFragment">
+
+    <fragment
+        android:id="@+id/logInFragment"
+        android:name="br.com.fiap.sociallearn.view.login.LogInFragment"
+        android:label="LogInFragment" >
+    <action
+        android:id="@+id/action_loginFragment_to_signUpFragment"
+        app:destination="@id/cadastroFragment"
+        app:enterAnim="@anim/slide_in_right"
+        app:exitAnim="@anim/slide_out_left"
+        app:popEnterAnim="@android:anim/slide_in_left"
+        app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="br.com.fiap.sociallearn.view.home.HomeFragment"
+        android:label="HomeFragment" />
+    <fragment
+        android:id="@+id/cadastroFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroFragment"
+        android:label="CadastroFragment" >
+        <action
+            android:id="@+id/action_cadastroFragment_to_cadastroPerfilFragment"
+            app:destination="@id/cadastroPerfilFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroPerfilFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroPerfilFragment"
+        android:label="CadastroPerfilFragment" >
+        <action
+            android:id="@+id/action_cadastroPerfilFragment_to_cadastroLearnFragment"
+            app:destination="@id/cadastroLearnFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroLearnFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroLearnFragment"
+        android:label="CadastroLearnFragment"  >
+        <action
+            android:id="@+id/action_cadastroLearnFragment_to_cadastroTeachFragment"
+            app:destination="@id/cadastroTeachFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@android:anim/slide_in_left"
+            app:popExitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/cadastroTeachFragment"
+        android:name="br.com.fiap.sociallearn.view.cadastro.CadastroTeachFragment"
+        android:label="CadastroTeachFragment" />
+</navigation>

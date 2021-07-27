@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="br.com.example.sociallearn">
 
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,10 +10,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialLearn">
-        <activity android:name=".view.CadastroCompartilharSobre"></activity>
-        <activity android:name=".view.CadastroAprenderSobre" />
-        <activity android:name=".view.CadastroPerfil" />
-        <activity android:name=".view.CadastroInfoPessoais">
+        <activity android:name="br.com.fiap.sociallearn.view.cadastro.CadastroCompartilharSobre" />
+        <activity android:name="br.com.fiap.sociallearn.view.cadastro.CadastroAprenderSobre" />
+        <activity android:name="br.com.fiap.sociallearn.view.cadastro.CadastroPerfil" />
+        <activity android:name="br.com.fiap.sociallearn.view.cadastro.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
