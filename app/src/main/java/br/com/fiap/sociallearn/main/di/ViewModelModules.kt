@@ -2,11 +2,11 @@ package br.com.example.sociallearn.main.di
 
 import br.com.example.sociallearn.data.login.useCases.CheckUserIsLogged
 import br.com.example.sociallearn.data.login.useCases.MakeLogin
-import br.com.example.sociallearn.data.signUp.MakeSignUp
 import br.com.example.sociallearn.viewmodel.login.LoginContract
 import br.com.example.sociallearn.viewmodel.login.LoginViewModel
 import br.com.example.sociallearn.viewmodel.signUp.SignUpContract
 import br.com.example.sociallearn.viewmodel.signUp.SignUpViewModel
+import br.com.fiap.sociallearn.data.signUp.useCases.MakeSignUp
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
 

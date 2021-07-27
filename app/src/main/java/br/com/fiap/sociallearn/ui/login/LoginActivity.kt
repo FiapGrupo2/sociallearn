@@ -4,12 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import br.com.example.sociallearn.R
-import br.com.example.sociallearn.ui.search.SearchContentActivity
 import br.com.example.sociallearn.ui.signUp.SignUpActivity
 import br.com.example.sociallearn.viewmodel.login.LoginContract
-import br.com.example.sociallearn.viewmodel.login.LoginViewModel
-import org.koin.android.viewmodel.compat.ViewModelCompat.viewModel
-import org.koin.core.parameter.parametersOf
+import br.com.fiap.sociallearn.ui.home.HomeActivity
 
 class LoginActivity : AppCompatActivity(), LoginContract {
 
@@ -24,7 +21,7 @@ class LoginActivity : AppCompatActivity(), LoginContract {
     }
 
     override fun goToMainActivity() {
-        startActivity(Intent(this, SearchContentActivity::class.java))
+        startActivity(Intent(this, HomeActivity::class.java))
     }
 
     override fun showGenericErrorMessage() {

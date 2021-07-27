@@ -5,7 +5,7 @@ import br.com.example.sociallearn.main.di.DataModules
 import br.com.example.sociallearn.main.di.ViewModelModules
 import org.koin.core.context.startKoin
 
-class MyApp: Application() {
+class MyApp : Application() {
     override fun onCreate() {
         super.onCreate()
 

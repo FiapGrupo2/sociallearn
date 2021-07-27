@@ -4,10 +4,10 @@ import androidx.lifecycle.ViewModel
 import br.com.example.sociallearn.domain.exceptions.GenericException
 import br.com.example.sociallearn.domain.useCases.signUp.MakeSignUpContract
 
-class SignUpViewModel (
+class SignUpViewModel(
     private val contract: SignUpContract,
     private val makeSignUp: MakeSignUpContract
-    ): ViewModel() {
+) : ViewModel() {
 
     var email: String = ""
     var password: String = ""
