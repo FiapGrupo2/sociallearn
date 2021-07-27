@@ -1,36 +1,97 @@
 package br.com.fiap.sociallearn.view.cadastro
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import android.widget.TextView
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.findFragment
+import androidx.fragment.app.viewModels
+import androidx.lifecycle.Observer
+import androidx.navigation.fragment.NavHostFragment
 import br.com.example.sociallearn.R
+import br.com.fiap.sociallearn.extensions.hideKeyboard
+import br.com.fiap.sociallearn.model.Gender
+import br.com.fiap.sociallearn.model.Profile
+import br.com.fiap.sociallearn.model.RequestState
+import br.com.fiap.sociallearn.model.User
 import br.com.fiap.sociallearn.view.base.auth.BaseAuthFragment
+import br.com.fiap.sociallearn.viewmodel.SignUpViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [CadastroTeachFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class CadastroTeachFragment : BaseAuthFragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
+    private var name: String? = null
+    private var email: String? = null
+    private var pass: String? = null
+    private var genero: String? = null
+
+    private lateinit var btCreateAccount: Button
+    private var checkBoxDone = true
+    private lateinit var listProfife :ArrayList<Profile>
+
+    private val signUpViewModel: SignUpViewModel by viewModels()
+
     override val layout: Int
         get() = R.layout.fragment_cadastro_teach
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
+            name = it.getString("name")
+            email = it.getString("email")
+            pass = it.getString("pass")
+            genero = it.getString("genero")
         }
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpView(view)
+        registerObserver()
+    }
+    private fun setUpView(view: View) {
+        btCreateAccount = view.findViewById(R.id.btCreateAccount)
+
+        btCreateAccount = view.findViewById(R.id.btCreateAccount)
+        btCreateAccount.setOnClickListener {
+            hideKeyboard()
+            if(checkBoxDone) {
+                listProfife = ArrayList<Profile>()
+                listProfife.add(Profile(0,"user",true));
+
+                val newUser = User(0,
+                    name.toString(),
+                    email.toString(),
+                    pass.toString(),
+                    true,
+                    Gender.FEMALE,
+                    listProfife
+                )
+                signUpViewModel.signUp(newUser)
+            } else {
+                showMessage("Você precisa aceitar os termos de uso.")
+            }
+        }
+
+    }
+
+    private fun registerObserver() {
+        this.signUpViewModel.signUpState.observe(viewLifecycleOwner, Observer {
+            when (it) {
+                is RequestState.Success<*> -> {
+                    hideLoading()
+                    NavHostFragment.findNavController(this)
+                        .navigate(R.id.main_nav)
+                }
+                is RequestState.Error -> {
+                    hideLoading()
+                    showMessage(it.throwable.message)
+                }
+                is RequestState.Loading -> showLoading("Realizando a autenticação")
+            }
+        })
     }
 
     override fun onCreateView(
@@ -42,21 +103,14 @@ class CadastroTeachFragment : BaseAuthFragment() {
     }
 
     companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment CadastroTeachFragment.
-         */
-        // TODO: Rename and change types and number of parameters
         @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            CadastroTeachFragment().apply {
+        fun newInstance(name: String, email: String, pass: String, genero: String) =
+            CadastroFragment().apply {
                 arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
+                    putString("name", name)
+                    putString("email", email)
+                    putString("pass", pass)
+                    putString("genero", genero)
                 }
             }
     }

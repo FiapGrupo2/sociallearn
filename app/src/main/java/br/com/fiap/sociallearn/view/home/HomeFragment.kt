@@ -12,16 +12,6 @@ import br.com.fiap.sociallearn.model.RequestState
 import br.com.fiap.sociallearn.view.base.auth.BaseAuthFragment
 import br.com.fiap.sociallearn.viewmodel.HomeViewModel
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
-
-/**
- * A simple [Fragment] subclass.
- * Use the [HomeFragment.newInstance] factory method to
- * create an instance of this fragment.
- */
 class HomeFragment : BaseAuthFragment() {
     private val homeViewModel: HomeViewModel by viewModels()
 

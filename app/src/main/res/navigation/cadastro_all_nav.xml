@@ -11,11 +11,11 @@
     <fragment
         android:id="@+id/cadastroPerfilFragment"
         android:name="br.com.fiap.sociallearn.view.cadastro.CadastroPerfilFragment"
-        android:label="CadastroPerfilFragment" />
+        android:label="CadastroPerfilFragment"  />
     <fragment
         android:id="@+id/cadastroLearnFragment"
         android:name="br.com.fiap.sociallearn.view.cadastro.CadastroLearnFragment"
-        android:label="CadastroLearnFragment" />
+        android:label="CadastroLearnFragment"  />
     <fragment
         android:id="@+id/cadastroTeachFragment"
         android:name="br.com.fiap.sociallearn.view.cadastro.CadastroTeachFragment"

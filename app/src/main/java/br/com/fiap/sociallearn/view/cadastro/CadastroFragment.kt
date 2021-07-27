@@ -5,7 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import android.widget.EditText
+import androidx.core.os.bundleOf
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.NavHostFragment
 import br.com.example.sociallearn.R
 import br.com.fiap.sociallearn.view.base.auth.BaseAuthFragment
 import br.com.fiap.sociallearn.viewmodel.CadastroViewModel
@@ -14,6 +18,10 @@ import br.com.fiap.sociallearn.viewmodel.CadastroViewModel
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
+private lateinit var etUserName: EditText
+private lateinit var etEmail: EditText
+private lateinit var etPassword: EditText
+private lateinit var etGender: EditText
 
 /**
  * A simple [Fragment] subclass.
@@ -28,12 +36,36 @@ class CadastroFragment : BaseAuthFragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
+    private lateinit var btNext: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
             param1 = it.getString(ARG_PARAM1)
             param2 = it.getString(ARG_PARAM2)
+        }
+    }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        setUpView(view)
+
+    }
+    private fun setUpView(view: View) {
+        btNext = view.findViewById(R.id.btNextToPerfil)
+        etUserName = view.findViewById(R.id.etUserName)
+        etEmail = view.findViewById(R.id.etEmail)
+        etPassword = view.findViewById(R.id.etPassword)
+        etGender = view.findViewById(R.id.etGenero)
+
+        val bundle = bundleOf("name" to etUserName.text.toString(),
+            "email" to etEmail.text.toString(),
+            "pass" to etPassword.text.toString(),
+            "genero" to etGender.text.toString() )
+
+        btNext.setOnClickListener {
+            NavHostFragment.findNavController(this)
+                .navigate(R.id.action_cadastroFragment_to_cadastroPerfilFragment,
+                    bundle)
         }
     }
 

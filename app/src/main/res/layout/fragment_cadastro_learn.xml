@@ -90,8 +90,10 @@
             </LinearLayout>
 
             <Button
-                android:id="@+id/btCreateAccount"
-                android:text="@string/button_next"
-                style="@style/button"/>
+                android:id="@+id/btNextToCompartilhar"
+                style="@style/button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/button_next" />
         </LinearLayout>
     </LinearLayout></ScrollView>
