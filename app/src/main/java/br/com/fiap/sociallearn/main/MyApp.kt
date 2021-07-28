@@ -1,8 +1,9 @@
-package br.com.example.sociallearn.main
+package br.com.fiap.sociallearn.main
 
 import android.app.Application
-import br.com.example.sociallearn.main.di.DataModules
-import br.com.example.sociallearn.main.di.ViewModelModules
+import br.com.fiap.sociallearn.main.di.DataModules
+import br.com.fiap.sociallearn.main.di.ViewModelModules
+import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 
 class MyApp : Application() {
@@ -10,6 +11,8 @@ class MyApp : Application() {
         super.onCreate()
 
         startKoin {
+            androidContext(this@MyApp)
+
             modules(
                 DataModules.modules + ViewModelModules.modules
             )

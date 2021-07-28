@@ -1,7 +1,8 @@
-package br.com.example.sociallearn.viewmodel.login
+package br.com.fiap.sociallearn.viewmodel.login
 
 interface LoginContract {
-    fun goToMainActivity();
-    fun showGenericErrorMessage();
-    fun goToSignUpActivity();
+    fun goToMainActivity()
+    fun goToSignUpActivity()
+    fun goToResetPasswordActivity()
+    fun showGenericErrorMessage()
 }

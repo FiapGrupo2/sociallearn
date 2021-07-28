@@ -1,21 +1,21 @@
-package br.com.example.sociallearn.data.login.useCases
+package br.com.fiap.sociallearn.data.login.useCases
 
 import androidx.lifecycle.MutableLiveData
-import br.com.example.sociallearn.domain.exceptions.GenericException
-import br.com.example.sociallearn.domain.useCases.login.MakeLoginContract
+import br.com.fiap.sociallearn.domain.exceptions.GenericException
+import br.com.fiap.sociallearn.domain.useCases.login.MakeLoginContract
 import br.com.fiap.sociallearn.helpers.RequestState
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
 class MakeLogin : MakeLoginContract {
-    val loginState = MutableLiveData<RequestState<FirebaseUser>>()
+    private val loginState = MutableLiveData<RequestState<FirebaseUser>>()
     private var mAuth = FirebaseAuth.getInstance()
 
     override fun execute(
         email: String,
         password: String,
         onSuccessListener: () -> Unit,
-        OnFailureListener: (GenericException) -> Unit
+        onFailureListener: (GenericException) -> Unit
     ) {
         loginState.value = RequestState.Loading
 
@@ -31,6 +31,11 @@ class MakeLogin : MakeLoginContract {
                             )
                         )
                     }
+                }.addOnSuccessListener {
+                    onSuccessListener()
+                }
+                .addOnFailureListener() {
+                    onFailureListener(GenericException.GENERIC_ERROR)
                 }
         }
     }

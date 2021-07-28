@@ -71,29 +71,24 @@
                 <TextView
 
                     style="@style/label_edit_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
                     android:text="@string/label_username" />
 
                 <EditText
                     android:id="@+id/etUserNameSignUp"
                     style="@style/field_edit_text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    tools:text="seu nome" />
+                    tools:text="@{viewModel}" />
             </LinearLayout>
 
             <LinearLayout style="@style/container_edit_text">
 
                 <TextView
-
                     style="@style/label_edit_text"
                     android:text="@string/label_email" />
 
                 <EditText
                     android:id="@+id/etEmailSignUp"
                     style="@style/field_edit_text"
-                    tools:text="sociallearn@email.com.br" />
+                    tools:text="@{viewModel}" />
             </LinearLayout>
 
             <LinearLayout style="@style/container_edit_text">
@@ -106,7 +101,7 @@
                 <EditText
                     android:id="@+id/etGenero"
                     style="@style/field_edit_text"
-                    tools:text="feminino" />
+                    tools:text="@{viewModel}" />
             </LinearLayout>
 
             <LinearLayout style="@style/container_edit_text">
@@ -120,11 +115,10 @@
                     android:id="@+id/etPassword"
                     style="@style/field_edit_text"
                     android:inputType="textPassword"
-                    tools:text="xxxxxx" />
+                    tools:text="@{viewModel}" />
             </LinearLayout>
 
             <LinearLayout style="@style/container_edit_text">
-
                 <TextView
 
                     style="@style/label_edit_text"
@@ -134,7 +128,7 @@
                     android:id="@+id/etPasswordConfirm"
                     style="@style/field_edit_text"
                     android:inputType="textPassword"
-                    tools:text="xxxxxx" />
+                    tools:text="@{viewModel}" />
             </LinearLayout>
 
             <Button

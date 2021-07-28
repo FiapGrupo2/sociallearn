@@ -1,20 +1,19 @@
-package br.com.example.sociallearn.viewmodel.login
+package br.com.fiap.sociallearn.viewmodel.login
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import br.com.example.sociallearn.domain.exceptions.GenericException
-import br.com.example.sociallearn.domain.useCases.login.CheckUserIsLoggedContract
-import br.com.example.sociallearn.domain.useCases.login.MakeLoginContract
-import br.com.fiap.sociallearn.domain.useCases.login.ResetPasswordContract
+import br.com.fiap.sociallearn.domain.exceptions.GenericException
+import br.com.fiap.sociallearn.domain.useCases.login.CheckUserIsLoggedContract
+import br.com.fiap.sociallearn.domain.useCases.login.MakeLoginContract
 
 class LoginViewModel(
     private val contract: LoginContract,
     private val checkUserIsLogged: CheckUserIsLoggedContract,
     private val makeLogin: MakeLoginContract,
-    private val resetPassword: ResetPasswordContract
 ) : ViewModel() {
 
-    var email: String = ""
-    var password: String = ""
+    var email = MutableLiveData<String>()
+    var password = MutableLiveData<String>()
 
     fun onCreate() {
         if (checkUserIsLogged.execute()) {
@@ -23,8 +22,8 @@ class LoginViewModel(
     }
 
     fun onLoginPressed() {
-        makeLogin.execute(email, password, {
-            contract.goToMainActivity();
+        makeLogin.execute(email.value!!, password.value!!, {
+            contract.goToMainActivity()
         }, { error ->
             when (error) {
                 GenericException.GENERIC_ERROR -> contract.showGenericErrorMessage()
@@ -34,13 +33,10 @@ class LoginViewModel(
     }
 
     fun onResetPasswordPressed() {
-        resetPassword.execute(email, {
-            contract.goToMainActivity();
-        }, { error ->
-            when (error) {
-                GenericException.GENERIC_ERROR -> contract.showGenericErrorMessage()
-            }
-        }
-        )
+        contract.goToResetPasswordActivity()
+    }
+
+    fun onSignUpPressed() {
+        contract.goToSignUpActivity()
     }
 }

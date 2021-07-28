@@ -1,4 +1,4 @@
-package br.com.example.sociallearn.domain.useCases.register
+package br.com.fiap.sociallearn.domain.useCases.register
 
 interface UserRegisterContract {
 }

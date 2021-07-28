@@ -1,4 +1,4 @@
-package br.com.example.sociallearn.domain.entities
+package br.com.fiap.sociallearn.domain.entities
 
 import br.com.fiap.sociallearn.data.signUp.model.ProfileModel
 import br.com.fiap.sociallearn.domain.entities.GenderEnum

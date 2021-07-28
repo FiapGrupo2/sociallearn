@@ -1,6 +1,6 @@
-package br.com.example.sociallearn.domain.useCases.signUp
+package br.com.fiap.sociallearn.domain.useCases.signUp
 
-import br.com.example.sociallearn.domain.exceptions.GenericException
+import br.com.fiap.sociallearn.domain.exceptions.GenericException
 
 interface MakeSignUpContract {
     fun execute(

@@ -2,7 +2,7 @@ package br.com.fiap.sociallearn.ui.register
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import br.com.example.sociallearn.R
+import br.com.fiap.sociallearn.R
 
 class RegisterWhatToLearnActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

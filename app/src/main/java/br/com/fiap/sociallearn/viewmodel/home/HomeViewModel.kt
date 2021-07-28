@@ -1,26 +1,19 @@
 package br.com.fiap.sociallearn.viewmodel.home
 
-import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import br.com.example.sociallearn.viewmodel.search.content.SearchContentContract
+import br.com.fiap.sociallearn.domain.exceptions.GenericException
 import br.com.fiap.sociallearn.domain.useCases.logout.MakeLogoutContract
-import br.com.fiap.sociallearn.helpers.RequestState
-import com.google.firebase.auth.FirebaseAuth
+import br.com.fiap.sociallearn.viewmodel.search.content.SearchContentContract
 
 class HomeViewModel(
-    contract: HomeContract,
-    searchContent: SearchContentContract,
-    makeLogout: MakeLogoutContract
+    private val contract: HomeContract,
+    private val searchContent: SearchContentContract,
+    private val makeLogout: MakeLogoutContract
 ) : ViewModel() {
-    private var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
-
-    val loggedState = MutableLiveData<RequestState<Boolean>>()
 
     fun onLogoutPressed() {
-
-        loggedState.value = RequestState.Loading
-        mAuth.signOut()
-        loggedState.value = RequestState.Success(true)
+        makeLogout.execute {
+            contract.goToLoginActivity()
+        }
     }
-
 }

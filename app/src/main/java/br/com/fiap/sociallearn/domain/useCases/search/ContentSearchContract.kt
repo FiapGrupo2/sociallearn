@@ -1,4 +1,4 @@
-package br.com.example.sociallearn.domain.useCases.search
+package br.com.fiap.sociallearn.domain.useCases.search
 
 interface ContentSearchContract {
 }

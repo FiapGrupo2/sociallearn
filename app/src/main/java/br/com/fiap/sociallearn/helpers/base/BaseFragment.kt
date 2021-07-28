@@ -8,7 +8,7 @@ import android.widget.FrameLayout
 import android.widget.TextView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import br.com.example.sociallearn.R
+import br.com.fiap.sociallearn.R
 
 abstract class BaseFragment : Fragment() {
 

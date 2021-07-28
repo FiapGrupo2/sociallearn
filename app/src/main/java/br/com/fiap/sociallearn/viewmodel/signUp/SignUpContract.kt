@@ -1,4 +1,4 @@
-package br.com.example.sociallearn.viewmodel.signUp
+package br.com.fiap.sociallearn.viewmodel.signUp
 
 interface SignUpContract {
     fun goToRegisterUserProfileActivity()
