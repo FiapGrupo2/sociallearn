@@ -1,7 +1,7 @@
 package br.com.fiap.sociallearn.utils.firebase
 
-import br.com.example.sociallearn.BuildConfig
-import br.com.example.sociallearn.R
+import br.com.fiap.sociallearn.BuildConfig
+import br.com.fiap.sociallearn.R
 import com.google.android.gms.tasks.Task
 import com.google.firebase.ktx.Firebase
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig

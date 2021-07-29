@@ -10,7 +10,7 @@ import android.media.RingtoneManager
 import android.os.Build
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import br.com.example.sociallearn.R
+import br.com.fiap.sociallearn.R
 
 class NotificationManagerUtils(
     private val context: Context
