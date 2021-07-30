@@ -1,11 +1,10 @@
 package br.com.fiap.sociallearn.utils.featuretoggle
 
 import android.content.Context
-import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
-import br.com.fiap.sociallearn.BuildConfig
 import br.com.fiap.sociallearn.utils.firebase.RemoteConfigKeys
 import br.com.fiap.sociallearn.utils.firebase.RemoteConfigUtils
+import com.google.firebase.firestore.ktx.BuildConfig
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken
 
@@ -47,7 +46,8 @@ class FeatureToggleHelper {
 
     private fun getFeatureConfig(featureName: String): FeatureConfig {
         val gsonType = object : TypeToken<HashMap<String, FeatureConfig>>() {}.type
-        val json : String = RemoteConfigUtils.getFirebaseRemoteConfig().getString(RemoteConfigKeys.FEATURE_CONFIG)
+        val json: String =
+            RemoteConfigUtils.getFirebaseRemoteConfig().getString(RemoteConfigKeys.FEATURE_CONFIG)
         val featureConfig =
             Gson().fromJson<HashMap<String, FeatureConfig>>(json, gsonType)[featureName]
 
