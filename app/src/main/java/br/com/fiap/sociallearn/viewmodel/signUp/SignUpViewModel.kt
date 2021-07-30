@@ -1,6 +1,8 @@
 package br.com.fiap.sociallearn.viewmodel.signUp
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.com.fiap.sociallearn.domain.entities.UserEntity
 import br.com.fiap.sociallearn.domain.exceptions.GenericException
 import br.com.fiap.sociallearn.domain.useCases.signUp.MakeSignUpContract
 
@@ -9,18 +11,26 @@ class SignUpViewModel(
     private val makeSignUp: MakeSignUpContract
 ) : ViewModel() {
 
-    var email: String = ""
-    var password: String = ""
+    var name = MutableLiveData<String>()
+    var email = MutableLiveData<String>()
+    var password = MutableLiveData<String>()
+    var confirmPassword = MutableLiveData<String>()
 
-    fun onSignUpPressed() {
-        makeSignUp.execute(email, password, {
-            contract.goToMainActivity();
+    fun onNextPressed() {
+        var userEntity = UserEntity(
+            name = name.value!!,
+            email = email.value!!,
+            password = password.value!!,
+            active = true
+        )
+
+        makeSignUp.execute(userEntity, {
+            contract.goToKnowledgeToLearnActivity()
         }, { error ->
             when (error) {
                 GenericException.GENERIC_ERROR -> contract.showGenericErrorMessage()
             }
-        }
-        )
+        })
     }
 
 }

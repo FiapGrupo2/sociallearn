@@ -37,12 +37,12 @@ abstract class BaseFragment : Fragment() {
     fun showLoading(message: String = "Processando a requisição") {
         loadingView.visibility = View.VISIBLE
 
-         if (message.isNotEmpty())
-          loadingView.findViewById<TextView>(R.id.tvLoading).text = message
+        if (message.isNotEmpty())
+            loadingView.findViewById<TextView>(R.id.tvLoading).text = message
     }
 
     fun hideLoading() {
-       loadingView.visibility = View.GONE
+        loadingView.visibility = View.GONE
     }
 
     fun showMessage(message: String?) {

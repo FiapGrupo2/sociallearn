@@ -1,7 +1,7 @@
 package br.com.fiap.sociallearn.viewmodel.signUp
 
 interface SignUpContract {
-    fun goToRegisterUserProfileActivity()
+    fun goToKnowledgeToLearnActivity()
     fun goToMainActivity()
     fun showGenericErrorMessage()
 }

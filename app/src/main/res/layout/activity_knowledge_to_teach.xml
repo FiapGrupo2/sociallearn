@@ -1,10 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
+
     <data>
+
         <variable
             name="viewModel"
-            type="br.com.fiap.sociallearn.viewmodel.signUp.SignUpViewModel" />
+            type="br.com.fiap.sociallearn.viewmodel.register.KnowledgeToTeachViewModel" />
     </data>
 
     <ScrollView
@@ -68,65 +70,43 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="32dp"
-
                 android:orientation="vertical">
 
                 <LinearLayout style="@style/container_edit_text">
 
                     <TextView
                         style="@style/label_edit_text"
-                        android:text="@string/label_username" />
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/label_teach_about" />
 
-                    <EditText
-                        android:id="@+id/etUserNameSignUp"
-                        style="@style/field_edit_text"
-                        android:text="@={viewModel.name}" />
-                </LinearLayout>
-                <LinearLayout style="@style/container_edit_text">
+                    <CheckBox
+                        android:id="@+id/cbKotlin"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.kotlinIsChecked}"
+                        android:text="@string/kotlin" />
 
-                    <TextView
-                        style="@style/label_edit_text"
-                        android:text="@string/label_email" />
+                    <CheckBox
+                        android:id="@+id/cbJava"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.javaIsChecked}"
+                        android:text="@string/java" />
 
-                    <EditText
-                        android:id="@+id/etEmail"
-                        style="@style/field_edit_text"
-                        android:text="@={viewModel.email}" />
-                </LinearLayout>
-
-                <LinearLayout style="@style/container_edit_text">
-
-                    <TextView
-
-                        style="@style/label_edit_text"
-                        android:text="@string/label_password" />
-
-                    <EditText
-                        android:id="@+id/etPassword"
-                        style="@style/field_edit_text"
-                        android:inputType="textPassword"
-                        android:text="@={viewModel.password}" />
-                </LinearLayout>
-
-                <LinearLayout style="@style/container_edit_text">
-
-                    <TextView
-
-                        style="@style/label_edit_text"
-                        android:text="@string/label_password_confirm" />
-
-                    <EditText
-                        android:id="@+id/etPasswordConfirm"
-                        style="@style/field_edit_text"
-                        android:inputType="textPassword"
-                        android:text="@={viewModel.confirmPassword}" />
+                    <CheckBox
+                        android:id="@+id/cbPython"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.pythonIsChecked}"
+                        android:text="@string/python" />
                 </LinearLayout>
 
                 <Button
                     android:id="@+id/btCreateAccount"
                     style="@style/button"
-                    android:text="@string/button_next"
-                    android:onClick="@{() -> viewModel.onNextPressed()}"/>
+                    android:onClick="@{() -> viewModel.onFinishPressed()}"
+                    android:text="@string/button_finish" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

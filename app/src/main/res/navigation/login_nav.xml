@@ -42,7 +42,7 @@
     </activity>
     <activity
         android:id="@+id/whatToLearnActivity"
-        android:name="br.com.fiap.sociallearn.ui.register.RegisterWhatToLearnActivity"
+        android:name="br.com.fiap.sociallearn.ui.register.KnowledgeToLearnActivity"
         android:label="What To Learn Activity"  >
         <action
             android:id="@+id/action_whatToLearnActivity_to_whatToTeachActivity"
@@ -54,7 +54,7 @@
     </activity>
     <activity
         android:id="@+id/whatToTeachActivity"
-        android:name="br.com.fiap.sociallearn.ui.register.RegisterWhatToTeachActivity"
+        android:name="br.com.fiap.sociallearn.ui.register.KnowledgeToTeachActivity"
         android:label="What To Teach Activity">
         <action
             android:id="@+id/action_whatToLearnActivity_to_homeActivity"
