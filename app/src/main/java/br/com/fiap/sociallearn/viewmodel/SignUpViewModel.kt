@@ -3,8 +3,8 @@ package br.com.fiap.sociallearn.viewmodel
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.fiap.sociallearn.extensions.isValidEmail
-import br.com.fiap.sociallearn.model.RequestState
-import br.com.fiap.sociallearn.model.User
+import br.com.fiap.sociallearn.helpers.RequestState;
+import br.com.fiap.sociallearn.domain.entities.UserEntity;
 import br.com.heiderlopes.calculaflex.exceptions.EmailInvalidException
 import br.com.heiderlopes.calculaflex.exceptions.PasswordInvalidException
 import com.google.firebase.auth.FirebaseAuth
@@ -19,7 +19,7 @@ class SignUpViewModel : ViewModel() {
 
     val signUpState = MutableLiveData<RequestState<FirebaseUser>>()
 
-    fun signUp(newUser: User) {
+    fun signUp(newUser: UserEntity) {
 
         signUpState.value = RequestState.Loading
 
@@ -42,7 +42,7 @@ class SignUpViewModel : ViewModel() {
         }
     }
 
-    private fun saveInFirestore(newUser: User) {
+    private fun saveInFirestore(newUser: UserEntity) {
         db.collection("users")
             .document(FirebaseAuth.getInstance().currentUser?.uid!!)
             .set(newUser)
@@ -63,7 +63,7 @@ class SignUpViewModel : ViewModel() {
             }
     }
 
-    private fun validateFields(newUser: User): Boolean {
+    private fun validateFields(newUser: UserEntity): Boolean {
 
         if (newUser.name?.isEmpty() == true) {
             signUpState.value = RequestState.Error(Throwable("Informe o nome do usuário"))
