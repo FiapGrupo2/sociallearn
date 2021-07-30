@@ -8,7 +8,7 @@ import br.com.fiap.sociallearn.domain.useCases.login.MakeResetPasswordContract
 class ResetPasswordViewModel(
     private val contract: ResetPasswordContract,
     private val makeResetPassword: MakeResetPasswordContract
-): ViewModel() {
+) : ViewModel() {
 
     var email = MutableLiveData<String>()
 

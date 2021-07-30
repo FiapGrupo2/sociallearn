@@ -14,11 +14,8 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.SocialLearn">
         <activity android:name=".ui.login.ResetPasswordActivity"></activity>
-        <activity android:name=".ui.register.RegisterWhatToLearnActivity" />
-        <activity android:name=".ui.register.RegisterWhatToTeachActivity" />
-        <activity android:name=".ui.register.RegisterUserProfileActivity" />
-        <activity android:name=".ui.register.RegisterUserLearningContent" />
-        <activity android:name=".ui.register.RegisterLearningContentActivity" />
+        <activity android:name=".ui.register.KnowledgeToLearnActivity" />
+        <activity android:name=".ui.register.KnowledgeToTeachActivity" />
         <activity android:name=".ui.register.RegisterContentAreaActivity" />
         <activity android:name=".ui.register.RegisterClassSchedulingActivity" />
         <activity android:name=".ui.login.LoginActivity">

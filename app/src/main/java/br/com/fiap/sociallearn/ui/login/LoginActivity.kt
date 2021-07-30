@@ -17,7 +17,7 @@ import org.koin.core.parameter.parametersOf
 class LoginActivity : AppCompatActivity(), LoginContract {
 
     private lateinit var binding: ActivityLoginBinding
-    private val viewModel: LoginViewModel by viewModel { parametersOf(this)}
+    private val viewModel: LoginViewModel by viewModel { parametersOf(this) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

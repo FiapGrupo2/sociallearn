@@ -6,5 +6,5 @@ import br.com.fiap.sociallearn.domain.useCases.register.MakeRegisterClassSchedul
 class RegisterClassSchedulingViewModel(
     contract: RegisterClassSchedulingContract,
     makeRegister: MakeRegisterClassSchedulingContract
-): ViewModel() {
+) : ViewModel() {
 }
