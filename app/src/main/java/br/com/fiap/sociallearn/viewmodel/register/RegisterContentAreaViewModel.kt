@@ -6,5 +6,5 @@ import br.com.fiap.sociallearn.domain.useCases.register.MakeRegisterContentAreaC
 class RegisterContentAreaViewModel(
     contract: RegisterContentAreaContract,
     makeRegister: MakeRegisterContentAreaContract
-): ViewModel() {
+) : ViewModel() {
 }

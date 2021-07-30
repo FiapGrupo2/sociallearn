@@ -3,25 +3,34 @@ package br.com.fiap.sociallearn.ui.signUp
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.databinding.DataBindingUtil
 import br.com.fiap.sociallearn.R
+import br.com.fiap.sociallearn.databinding.ActivitySignUpBinding
 import br.com.fiap.sociallearn.ui.home.HomeActivity
-import br.com.fiap.sociallearn.ui.register.RegisterUserProfileActivity
+import br.com.fiap.sociallearn.ui.register.KnowledgeToLearnActivity
 import br.com.fiap.sociallearn.viewmodel.signUp.SignUpContract
+import br.com.fiap.sociallearn.viewmodel.signUp.SignUpViewModel
+import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.core.parameter.parametersOf
 
 class SignUpActivity : AppCompatActivity(), SignUpContract {
+
+    private lateinit var binding: ActivitySignUpBinding
+    private val viewModel: SignUpViewModel by viewModel { parametersOf(this) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_up)
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_sign_up)
+        binding.viewModel = viewModel
+        binding.lifecycleOwner = this
     }
 
-    override fun goToRegisterUserProfileActivity() {
-        val intent = Intent(this, RegisterUserProfileActivity::class.java)
-        startActivity(intent)
+    override fun goToKnowledgeToLearnActivity() {
+        startActivity(Intent(this, KnowledgeToLearnActivity::class.java))
     }
 
     override fun goToMainActivity() {
-        val intent = Intent(this, HomeActivity::class.java)
-        startActivity(intent)
+        startActivity(Intent(this, HomeActivity::class.java))
     }
 
     override fun showGenericErrorMessage() {

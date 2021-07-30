@@ -6,7 +6,7 @@ import br.com.fiap.sociallearn.helpers.RequestState
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 
-class CheckUserIsLogged: CheckUserIsLoggedContract {
+class CheckUserIsLogged : CheckUserIsLoggedContract {
     private var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
 
     val loggedState = MutableLiveData<RequestState<FirebaseUser>>()
