@@ -35,6 +35,18 @@
     <string name="label_learn_about">quer aprender sobre?</string>
     <string name="label_teach_about">quer compartilhar sobre?</string>
     <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_descricao_java">Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems. Em 2008 o Java foi adquirido pela empresa Oracle Corporation. Diferente das linguagens de programação modernas, que são compiladas para código nativo, a linguagem Java é compilada para um bytecode que é interpretado por uma máquina virtual. A linguagem de programação Java é a linguagem convencional da Plataforma Java, mas não é a sua única linguagem. J2ME Para programas e jogos de computador, celular, calculadoras, ou até mesmo o rádio do carro.</string>
+    <string name="label_descricao_angular">Angular na pratica</string>
+    <string name="label_descricao_node">Node</string>
+    <string name="label_descricao_boot">Certificação Bootstrap</string>
+    <string name="label_descricao_front">Tudo sobre front</string>
+    <string name="label_descricao_java_script">Javascript do zero</string>
+    <string name="label_descricao_ruby_java">Ruby</string>
+    <string name="label_descricao_sales">Descubra o que a Salesforce oferece</string>
+    <string name="label_descricao_security">Segurança de aplicação</string>
+    <string name="label_descricao_sql">SQL na pratica</string>
+    <string name="label_descricao_psql">PostgreSQL na pratica</string>
+
+    <string name="label_descricao_c">Evolução do C#</string>
 
 </resources>
