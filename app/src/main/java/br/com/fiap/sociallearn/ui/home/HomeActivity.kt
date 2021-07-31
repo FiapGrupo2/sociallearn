@@ -6,7 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.databinding.DataBindingUtil
 import br.com.fiap.sociallearn.R
-import br.com.fiap.sociallearn.databinding.ActivityMainBindingImpl
+import br.com.fiap.sociallearn.databinding.ActivityMainBinding
 import br.com.fiap.sociallearn.ui.cursos.*
 import br.com.fiap.sociallearn.ui.login.LoginActivity
 import br.com.fiap.sociallearn.utils.UtilToast
@@ -18,7 +18,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
 class HomeActivity : AppCompatActivity(), LogoutContract , HomeContract{
-    private lateinit var binding: ActivityMainBindingImpl
+    private lateinit var binding: ActivityMainBinding
     private lateinit var btSignOut: AppCompatImageView
 
     private val viewModelHome: HomeViewModel by viewModel { parametersOf(this) }

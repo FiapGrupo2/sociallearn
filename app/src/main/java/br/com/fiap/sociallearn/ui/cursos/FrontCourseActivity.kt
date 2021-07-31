@@ -1,18 +1,19 @@
 package br.com.fiap.sociallearn.ui.cursos
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.ui.home.HomeActivity
 import br.com.fiap.sociallearn.ui.login.LoginActivity
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.logout.LogoutContract
 import br.com.fiap.sociallearn.viewmodel.logout.LogoutViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
-class FrontCourseActivity : AppCompatActivity() , LogoutContract {
+class FrontCourseActivity : AppCompatActivity(), LogoutContract {
     private lateinit var btInicio: AppCompatImageView
     private lateinit var btSignOut: AppCompatImageView
     private val viewModel: LogoutViewModel by viewModel { parametersOf(this) }
@@ -40,7 +41,7 @@ class FrontCourseActivity : AppCompatActivity() , LogoutContract {
         startActivity(Intent(this, LoginActivity::class.java))
     }
 
-    override fun showGenericErrorMessage() {
-        TODO("Not yet implemented")
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }
