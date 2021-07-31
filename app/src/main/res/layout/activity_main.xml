@@ -107,7 +107,7 @@
                 android:layout_marginStart="4dp"
                 android:src="@drawable/javacourse"
                 android:clickable="true"
-                android:onClick="@{_ -> viewModel.goToCourseInformation()}"
+                android:onClick="@{_ -> viewModel.goToJavaActivity()}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
@@ -118,6 +118,8 @@
                 android:layout_height="93dp"
                 android:layout_marginStart="4dp"
                 android:src="@drawable/angularcouse"
+                android:clickable="true"
+                android:onClick="@{_ -> viewModel.goToAngularActivity()}"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
         </LinearLayout>
@@ -133,6 +135,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/nodejscourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToNodeActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -143,6 +147,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/boostrapcourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToBootActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
@@ -159,6 +165,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/frontcourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToFrontActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -169,6 +177,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/javascriptcourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToJSActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
@@ -185,6 +195,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/courserubyxjavascript"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToJRActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -196,6 +208,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/salesforcecourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToSalesActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
@@ -212,6 +226,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/securitycourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToSecurityActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -222,6 +238,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/sqlcourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToSQActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
@@ -238,6 +256,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/postgrecourse"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToPSQLActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -249,6 +269,8 @@
             android:layout_height="93dp"
             android:layout_marginStart="4dp"
             android:src="@drawable/ccourse2"
+            android:clickable="true"
+            android:onClick="@{_ -> viewModel.goToCActivity()}"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>

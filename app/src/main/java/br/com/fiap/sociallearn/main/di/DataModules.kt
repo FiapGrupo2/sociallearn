@@ -3,6 +3,7 @@ package br.com.fiap.sociallearn.main.di
 import br.com.fiap.sociallearn.data.login.useCases.CheckUserIsLogged
 import br.com.fiap.sociallearn.data.login.useCases.MakeLogin
 import br.com.fiap.sociallearn.data.login.useCases.MakeResetPassword
+import br.com.fiap.sociallearn.data.logout.useCases.MakeLogout
 import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToLearnAssociation
 import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToTeachAssociation
 import br.com.fiap.sociallearn.data.signUp.useCases.MakeSignUp
@@ -16,5 +17,6 @@ object DataModules {
         factory { MakeSignUp() }
         factory { MakeKnowledgeToLearnAssociation() }
         factory { MakeKnowledgeToTeachAssociation() }
+        factory { MakeLogout() }
     }
 }
