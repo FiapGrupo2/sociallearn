@@ -21,20 +21,6 @@ class JavaCourseScreenTest {
     fun validaCarregamentoInformacao() {
         Espresso
             .onView(
-                ViewMatchers.withId(R.id.btInicio)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.btSignOut)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
                 ViewMatchers.withId(R.id.ivCursoJava3)
             )
             .check(
