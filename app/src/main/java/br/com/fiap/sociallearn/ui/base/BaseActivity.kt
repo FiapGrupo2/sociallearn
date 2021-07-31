@@ -20,17 +20,25 @@ open class BaseActivity : AppCompatActivity(), BaseContract {
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
         menuInflater.inflate(R.menu.menu, menu)
+
         val searchBtn = menu?.findItem(R.id.search)
         val searchEditText = searchBtn?.actionView as SearchView
+        searchEditText.setQuery(getResources().getString(R.string.search_hint), false);
+
         searchEditText.setOnQueryTextListener(
             object : SearchView.OnQueryTextListener {
+
                 override fun onQueryTextChange(newText: String?): Boolean {
                     return false
                 }
 
+
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     Log.i("status", "submit")
                     goToUserListResultActivity(query!!)
+                    if (searchEditText.getQuery() == null) {
+                        searchEditText.setQuery(getResources().getString(R.string.search_hint), false);
+                    }
                     return false
                 }
             }

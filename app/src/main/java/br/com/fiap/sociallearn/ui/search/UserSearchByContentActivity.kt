@@ -46,7 +46,7 @@ class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract 
         handleSearch(intent)!!.addOnCompleteListener { task ->
             val userList = ArrayList<UserEntityResponse>()
 
-            if (task.isSuccessful) {
+            if (task.isSuccessful && task.result.documents.size > 0) {
                 for (document in task.result.documents) {
                     Log.i("e-mail", document.get("email").toString())
 
@@ -64,6 +64,12 @@ class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract 
                 recyclerView.adapter = SearchUserAdapter(userList, this)
                 val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
                 recyclerView.layoutManager = layoutManager
+                binding.tvEmptyView.setVisibility(View.GONE)
+                binding.userListRecyclerview.setVisibility(View.VISIBLE)
+            } else {
+                binding.tvEmptyView.setVisibility(View.VISIBLE)
+                binding.userListRecyclerview.setVisibility(View.GONE)
+
             }
         }
     }
