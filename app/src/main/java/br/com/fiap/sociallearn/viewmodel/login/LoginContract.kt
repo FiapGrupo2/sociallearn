@@ -4,5 +4,5 @@ interface LoginContract {
     fun goToMainActivity()
     fun goToSignUpActivity()
     fun goToResetPasswordActivity()
-    fun showGenericErrorMessage()
+    fun showMessage(restId: Int)
 }

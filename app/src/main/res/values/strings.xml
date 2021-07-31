@@ -54,4 +54,15 @@
     <string name="java">Java</string>
     <string name="python">Python</string>
     <string name="label_home">Home</string>
+    <!--ERR, WNG, MSG-->
+    <string name="ERROR_INVALID_EMAIL">E-mail com formato incorreto!</string>
+    <string name="ERROR_WRONG_PASSWORD">Senha inválida</string>
+    <string name="ERROR_USER_MISMATCH">Login não encontrado!</string>
+    <string name="ERROR_EMAIL_ALREADY_IN_USE">E-mail já em uso</string>
+    <string name="ERROR_USER_DISABLED">Usuário bloqueado</string>
+    <string name="ERROR_ITEM_NOT_FOUND">Item não encontrado</string>
+    <string name="ERROR_OPERATION_NOT_ALLOWED">Operação não permitida</string>
+    <string name="ERROR_GENERIC">Ocorreu um erro inesperado. Ação não concluída!</string>
+    <string name="WARNING_EMPTY_LIST">Lista vazia</string>
+    <string name="MSG_SUCCESS">Ação concluída com sucesso!</string>
 </resources>

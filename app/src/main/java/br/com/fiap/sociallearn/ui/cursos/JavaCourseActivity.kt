@@ -7,6 +7,7 @@ import androidx.appcompat.widget.AppCompatImageView
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.ui.home.HomeActivity
 import br.com.fiap.sociallearn.ui.login.LoginActivity
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.login.LoginViewModel
 import br.com.fiap.sociallearn.viewmodel.logout.LogoutContract
 import br.com.fiap.sociallearn.viewmodel.logout.LogoutViewModel
@@ -42,7 +43,7 @@ class JavaCourseActivity : AppCompatActivity(), LogoutContract {
         startActivity(Intent(this, LoginActivity::class.java))
     }
 
-    override fun showGenericErrorMessage() {
-        TODO("Not yet implemented")
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }

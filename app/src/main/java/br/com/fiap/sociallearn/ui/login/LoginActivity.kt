@@ -8,6 +8,7 @@ import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.databinding.ActivityLoginBinding
 import br.com.fiap.sociallearn.ui.home.HomeActivity
 import br.com.fiap.sociallearn.ui.signUp.SignUpActivity
+import br.com.fiap.sociallearn.utils.UtilToast;
 import br.com.fiap.sociallearn.viewmodel.login.LoginContract
 import br.com.fiap.sociallearn.viewmodel.login.LoginViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -27,6 +28,10 @@ class LoginActivity : AppCompatActivity(), LoginContract {
         viewModel.onCreate()
     }
 
+    override fun onStart() {
+        super.onStart()
+    }
+
     override fun goToMainActivity() {
         startActivity(Intent(this, HomeActivity::class.java))
     }
@@ -39,7 +44,7 @@ class LoginActivity : AppCompatActivity(), LoginContract {
         startActivity(Intent(this, ResetPasswordActivity::class.java))
     }
 
-    override fun showGenericErrorMessage() {
-        TODO("Not yet implemented")
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }

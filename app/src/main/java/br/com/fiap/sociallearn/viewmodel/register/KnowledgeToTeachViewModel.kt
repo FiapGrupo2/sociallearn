@@ -2,6 +2,8 @@ package br.com.fiap.sociallearn.viewmodel.register
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import br.com.fiap.sociallearn.R
+import br.com.fiap.sociallearn.domain.exceptions.GenericException
 import br.com.fiap.sociallearn.domain.useCases.register.MakeKnowledgeToTeachAssociationContract
 
 class KnowledgeToTeachViewModel(
@@ -33,7 +35,7 @@ class KnowledgeToTeachViewModel(
             contract.goToHomeActivity()
         }, { error ->
             when (error) {
-
+                GenericException.GENERIC_ERROR -> contract.showMessage(R.string.ERROR_GENERIC)
             }
         })
     }

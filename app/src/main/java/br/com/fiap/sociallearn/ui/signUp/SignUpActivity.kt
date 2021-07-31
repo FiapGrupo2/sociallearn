@@ -8,13 +8,13 @@ import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.databinding.ActivitySignUpBinding
 import br.com.fiap.sociallearn.ui.home.HomeActivity
 import br.com.fiap.sociallearn.ui.register.KnowledgeToLearnActivity
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.signUp.SignUpContract
 import br.com.fiap.sociallearn.viewmodel.signUp.SignUpViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
 class SignUpActivity : AppCompatActivity(), SignUpContract {
-
     private lateinit var binding: ActivitySignUpBinding
     private val viewModel: SignUpViewModel by viewModel { parametersOf(this) }
 
@@ -33,7 +33,7 @@ class SignUpActivity : AppCompatActivity(), SignUpContract {
         startActivity(Intent(this, HomeActivity::class.java))
     }
 
-    override fun showGenericErrorMessage() {
-        TODO("Not yet implemented")
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }
