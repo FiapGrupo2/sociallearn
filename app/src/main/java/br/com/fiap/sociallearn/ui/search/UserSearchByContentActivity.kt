@@ -15,6 +15,7 @@ import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.SearchableProvider
 import br.com.fiap.sociallearn.databinding.ActivityUserSearchByContentBinding
 import br.com.fiap.sociallearn.domain.entities.UserEntity
+import br.com.fiap.sociallearn.ui.base.BaseActivity
 import br.com.fiap.sociallearn.ui.search.adapter.SearchUserAdapter
 import br.com.fiap.sociallearn.viewmodel.search.content.UserSearchByContentContract
 import br.com.fiap.sociallearn.viewmodel.search.content.UserSearchByContentViewModel
@@ -25,7 +26,7 @@ import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
 
-class UserSearchByContentActivity : AppCompatActivity(), UserSearchByContentContract {
+class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract {
     private lateinit var binding: ActivityUserSearchByContentBinding
     private val viewModel: UserSearchByContentViewModel by viewModel { parametersOf(this) }
 
@@ -63,50 +64,6 @@ class UserSearchByContentActivity : AppCompatActivity(), UserSearchByContentCont
             }
         }
     }
-
-    override fun onNewIntent(intent: Intent?) {
-        super.onNewIntent(intent)
-        setIntent(intent)
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.menu, menu)
-        val searchBtn = menu?.findItem(R.id.search)
-        val searchEditText = searchBtn?.actionView as SearchView
-        searchEditText.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextChange(newText: String?): Boolean {
-                return true
-            }
-
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                Log.i("status", "submit")
-                return false
-            }
-        }
-
-        )
-
-        return super.onCreateOptionsMenu(menu)
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        val id = item.itemId
-
-        if (id == android.R.id.home) {
-            finish()
-        } else if (id == R.id.action_delete) {
-            val searchRecentSuggestions = SearchRecentSuggestions(
-                this,
-                SearchableProvider.authority,
-                SearchableProvider.mode
-            )
-
-            searchRecentSuggestions.clearHistory()
-        }
-
-        return super.onOptionsItemSelected(item)
-    }
-
 
     private fun handleSearch(intent: Intent?): Task<QuerySnapshot>? {
         intent?.let {
