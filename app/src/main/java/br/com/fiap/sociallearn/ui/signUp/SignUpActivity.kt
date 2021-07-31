@@ -34,16 +34,7 @@ class SignUpActivity : AppCompatActivity(), SignUpContract {
     }
 
     override fun showMessage(resId: Int) {
-        if (resId == R.string.ERROR_NULL_SIGN) {
-            binding.tvError.text = "Todos os campos precisam estar preenchido!"
-        }
-        if (resId == R.string.ERROR_DIF_PASS) {
-            binding.tvError.text = "As senhas digitadas não são iguais"
-        }
-        if (resId == R.string.ERROR_EMAIL_INVALIDO) {
-            binding.tvError.text = "E-mail invalído!"
-        }
-
+        binding.tvError.text = getResources().getString(resId)
         UtilToast.showMessage(this, resId);
     }
 }
