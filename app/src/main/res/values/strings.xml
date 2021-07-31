@@ -65,8 +65,9 @@
     <string name="ERROR_GENERIC">Ocorreu um erro inesperado. Ação não concluída!</string>
     <string name="WARNING_EMPTY_LIST">Lista vazia</string>
     <string name="MSG_SUCCESS">Ação concluída com sucesso!</string>
-    <string name="MSG_NULL_LOGIN">E-mail e senha precisam estar preenchidos!</string>
-    <string name="MSG_NULL_RESET">E-mail precisa estar preenchido!</string>
-    <string name="MSG_NULL_SIGN">Todos os campos precisam estar preenchido!</string>
-
+    <string name="ERROR_NULL_LOGIN">E-mail e senha precisam estar preenchidos!</string>
+    <string name="ERROR_NULL_RESET">E-mail precisa estar preenchido!</string>
+    <string name="ERROR_NULL_SIGN">Todos os campos precisam estar preenchido!</string>
+    <string name="ERROR_DIF_PASS">As senhas digitadas não são iguais</string>
+    <string name="ERROR_EMAIL_INVALIDO">E-mail invalído!</string>
 </resources>

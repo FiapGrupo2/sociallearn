@@ -36,7 +36,7 @@ class LoginSreenTest {
                 ViewActions.click()
             )
         Espresso
-            .onView(withText(R.string.MSG_NULL_LOGIN)
+            .onView(withText(R.string.ERROR_NULL_LOGIN)
             )
             .check(
                 ViewAssertions.matches(ViewMatchers.isDisplayed())

@@ -30,7 +30,7 @@ class ResetPasswordScreenTest {
             )
         Espresso
             .onView(
-                ViewMatchers.withText(R.string.MSG_NULL_RESET)
+                ViewMatchers.withText(R.string.ERROR_NULL_RESET)
             )
             .check(
                 ViewAssertions.matches(ViewMatchers.isDisplayed())

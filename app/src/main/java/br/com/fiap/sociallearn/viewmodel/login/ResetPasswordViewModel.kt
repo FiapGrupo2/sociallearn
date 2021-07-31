@@ -25,7 +25,7 @@ class ResetPasswordViewModel(
             }
             )
         } else {
-            contract.showMessage(R.string.MSG_NULL_RESET)
+            contract.showMessage(R.string.ERROR_NULL_RESET)
         }
     }
 }

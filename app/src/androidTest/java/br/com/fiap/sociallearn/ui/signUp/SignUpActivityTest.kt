@@ -29,12 +29,13 @@ class SignUpActivityTest {
             )
         Espresso
             .onView(
-                ViewMatchers.withText(R.string.MSG_NULL_SIGN)
+                ViewMatchers.withText(R.string.ERROR_NULL_SIGN)
             )
             .check(
                 ViewAssertions.matches(ViewMatchers.isDisplayed())
             )
     }*/
+
 
     @Test
     fun validaCarregamento() {

@@ -42,7 +42,7 @@ class LoginViewModel(
             }
             )
         } else {
-            contract.showMessage(R.string.MSG_NULL_LOGIN)
+            contract.showMessage(R.string.ERROR_NULL_LOGIN)
         }
     }
 
