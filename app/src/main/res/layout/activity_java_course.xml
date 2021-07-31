@@ -6,30 +6,7 @@
     <androidx.constraintlayout.widget.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.cursos.JavaCourseActivity">
-
-
-    <ImageView
-        android:id="@+id/btInicio"
-        android:layout_width="105dp"
-        android:layout_height="76dp"
-        android:layout_marginStart="4dp"
-        android:contentDescription="@string/logo_app_content_desc"
-        android:src="@drawable/sociallearn"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <ImageView
-        android:id="@+id/btSignOut"
-        android:layout_width="64dp"
-        android:layout_height="64dp"
-        android:layout_marginStart="238dp"
-        android:paddingStart="24dp"
-        android:paddingTop="12dp"
-        android:src="@drawable/ic_signout"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btInicio"
-        app:layout_constraintTop_toTopOf="parent" />
+    tools:context=".ui.courses.JavaCourseActivity">
 
     <ImageView
         android:id="@+id/ivCursoJava3"

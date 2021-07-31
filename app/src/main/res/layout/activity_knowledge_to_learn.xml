@@ -82,13 +82,6 @@
                         android:text="@string/label_learn_about" />
 
                     <CheckBox
-                        android:id="@+id/cbKotlin"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:checked="@={viewModel.kotlinIsChecked}"
-                        android:text="@string/kotlin" />
-
-                    <CheckBox
                         android:id="@+id/cbJava"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
@@ -96,11 +89,81 @@
                         android:text="@string/java" />
 
                     <CheckBox
-                        android:id="@+id/cbPython"
+                        android:id="@+id/cbKotlin"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:checked="@={viewModel.pythonIsChecked}"
-                        android:text="@string/python" />
+                        android:checked="@={viewModel.kotlinIsChecked}"
+                        android:text="@string/kotlin" />
+
+                    <CheckBox
+                        android:id="@+id/cbAngular"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.angularIsChecked}"
+                        android:text="@string/angular" />
+
+                    <CheckBox
+                        android:id="@+id/cbNodeJs"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.nodeJsIsChecked}"
+                        android:text="@string/nodeJs" />
+
+                    <CheckBox
+                        android:id="@+id/cbBootstrap"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.bootstrapIsChecked}"
+                        android:text="@string/bootstrap" />
+
+                    <CheckBox
+                        android:id="@+id/cbJavaScript"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.javaScriptIsChecked}"
+                        android:text="@string/javaScript" />
+
+                    <CheckBox
+                        android:id="@+id/cbRuby"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.rubyIsChecked}"
+                        android:text="@string/ruby" />
+
+                    <CheckBox
+                        android:id="@+id/cbSalesforce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.salesforceIsChecked}"
+                        android:text="@string/salesforce" />
+
+                    <CheckBox
+                        android:id="@+id/cbSI"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.securityIsChecked}"
+                        android:text="@string/si" />
+
+                    <CheckBox
+                        android:id="@+id/cbSQLServer"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.sqlServerIsChecked}"
+                        android:text="@string/sqlServer" />
+
+                    <CheckBox
+                        android:id="@+id/cbPostgree"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.postgreeIsChecked}"
+                        android:text="@string/postgree" />
+
+                    <CheckBox
+                        android:id="@+id/cbCsharp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:checked="@={viewModel.cSharpIsChecked}"
+                        android:text="@string/csharp" />
                 </LinearLayout>
 
                 <Button

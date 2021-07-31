@@ -26,7 +26,7 @@
     <string name="label_clear">Limpar dados</string>
     <string name="loading_message_processing">Carregando</string>
     <string name="hello">Ola</string>
-    <string name="welcome_sugestions">separamos algumas sugestões para você</string>
+    <string name="welcome_sugestions">Olá, separamos algumas sugestões para você!</string>
     <string name="label_genero">genero</string>
     <string name="label_what_want_todo">selecione o que quer fazer</string>
     <string name="label_learn">Aprender</string>
@@ -70,4 +70,18 @@
     <string name="ERROR_NULL_SIGN">Todos os campos precisam estar preenchido!</string>
     <string name="ERROR_DIF_PASS">As senhas digitadas não são iguais</string>
     <string name="ERROR_EMAIL_INVALIDO">E-mail invalído!</string>
+    <string name="app_label">Social Learn</string>
+    <string name="search_hint">Pesquisar usuários por conteúdo</string>
+    <string name="action_delete">Limpar histórico de busca</string>
+    <string name="csharp">C#</string>
+    <string name="postgree">Postgree</string>
+    <string name="sqlServer">SQL Server</string>
+    <string name="si">Segurança da Informação</string>
+    <string name="salesforce">Salesforce</string>
+    <string name="ruby">Ruby</string>
+    <string name="javaScript">JavaScript</string>
+    <string name="bootstrap">Bootstrap</string>
+    <string name="nodeJs">NodeJS</string>
+    <string name="angular">Angular</string>
+    <string name="no_course_available">O curso buscado ainda não está em nossa plataforma =(</string>
 </resources>

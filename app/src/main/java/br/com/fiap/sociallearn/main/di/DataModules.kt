@@ -6,6 +6,7 @@ import br.com.fiap.sociallearn.data.login.useCases.MakeResetPassword
 import br.com.fiap.sociallearn.data.logout.useCases.MakeLogout
 import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToLearnAssociation
 import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToTeachAssociation
+import br.com.fiap.sociallearn.data.search.MakeUserSearchByContent
 import br.com.fiap.sociallearn.data.signUp.useCases.MakeSignUp
 import org.koin.dsl.module
 
@@ -18,5 +19,6 @@ object DataModules {
         factory { MakeKnowledgeToLearnAssociation() }
         factory { MakeKnowledgeToTeachAssociation() }
         factory { MakeLogout() }
+        factory { MakeUserSearchByContent() }
     }
 }
