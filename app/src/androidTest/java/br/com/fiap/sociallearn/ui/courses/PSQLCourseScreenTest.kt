@@ -1,4 +1,4 @@
-package br.com.fiap.sociallearn.ui.cursos
+package br.com.fiap.sociallearn.ui.courses
 
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.assertion.ViewAssertions

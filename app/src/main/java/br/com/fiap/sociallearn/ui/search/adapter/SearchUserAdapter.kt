@@ -21,7 +21,6 @@ class SearchUserAdapter(
      * (custom ViewHolder).
      */
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-
         fun bindView(user: UserEntityResponse) {
             val userName = itemView.userName
             val email = itemView.email

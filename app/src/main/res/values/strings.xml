@@ -73,4 +73,15 @@
     <string name="app_label">Social Learn</string>
     <string name="search_hint">Pesquisar usuários por conteúdo</string>
     <string name="action_delete">Limpar histórico de busca</string>
+    <string name="csharp">C#</string>
+    <string name="postgree">Postgree</string>
+    <string name="sqlServer">SQL Server</string>
+    <string name="si">Segurança da Informação</string>
+    <string name="salesforce">Salesforce</string>
+    <string name="ruby">Ruby</string>
+    <string name="javaScript">JavaScript</string>
+    <string name="bootstrap">Bootstrap</string>
+    <string name="nodeJs">NodeJS</string>
+    <string name="angular">Angular</string>
+    <string name="no_course_available">O curso buscado ainda não está em nossa plataforma =(</string>
 </resources>

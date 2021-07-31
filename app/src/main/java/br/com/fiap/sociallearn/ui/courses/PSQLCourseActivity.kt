@@ -1,13 +1,12 @@
-package br.com.fiap.sociallearn.ui.cursos
+package br.com.fiap.sociallearn.ui.courses
 
 import android.os.Bundle
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.ui.base.BaseActivity
-import br.com.fiap.sociallearn.utils.UtilToast
 
-class SalesCourseActivity : BaseActivity() {
+class PSQLCourseActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sales_course)
+        setContentView(R.layout.activity_psqlcourse)
     }
 }

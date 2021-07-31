@@ -1,4 +1,4 @@
-package br.com.fiap.sociallearn.ui.cursos
+package br.com.fiap.sociallearn.ui.courses
 
 import android.os.Bundle
 import br.com.fiap.sociallearn.R

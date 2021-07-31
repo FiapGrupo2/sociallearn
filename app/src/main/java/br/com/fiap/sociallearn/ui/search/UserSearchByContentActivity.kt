@@ -5,6 +5,7 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.SearchRecentSuggestions
 import android.util.Log
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import br.com.fiap.sociallearn.R
@@ -18,9 +19,10 @@ import br.com.fiap.sociallearn.viewmodel.search.content.UserSearchByContentViewM
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.activity_user_search_by_content.*
+import kotlinx.android.synthetic.main.activity_user_search_by_content.view.*
+import kotlinx.android.synthetic.main.user_search_list.view.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
-
 
 class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract {
     private lateinit var binding: ActivityUserSearchByContentBinding
@@ -32,7 +34,12 @@ class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract 
         binding.viewModel = viewModel
         binding.lifecycleOwner = this
         showResults()
+    }
 
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        setIntent(intent)
+        showResults()
     }
 
     private fun showResults() {
@@ -81,9 +88,5 @@ class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract 
             SearchableProvider.mode
         )
         searchRecentSuggestions.saveRecentQuery(query, null)
-    }
-
-    override fun showMessage(restId: Int) {
-        TODO("Not yet implemented")
     }
 }

@@ -6,9 +6,8 @@ import androidx.databinding.DataBindingUtil
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.databinding.ActivityMainBinding
 import br.com.fiap.sociallearn.ui.base.BaseActivity
-import br.com.fiap.sociallearn.ui.cursos.*
+import br.com.fiap.sociallearn.ui.courses.*
 import br.com.fiap.sociallearn.ui.login.LoginActivity
-import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.home.HomeContract
 import br.com.fiap.sociallearn.viewmodel.home.HomeViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -75,9 +74,5 @@ class HomeActivity : BaseActivity(), HomeContract {
 
     override fun goToCActivity() {
         startActivity(Intent(this, CSharpCourseActivity::class.java))
-    }
-
-    override fun showMessage(resId: Int) {
-        UtilToast.showMessage(this, resId);
     }
 }

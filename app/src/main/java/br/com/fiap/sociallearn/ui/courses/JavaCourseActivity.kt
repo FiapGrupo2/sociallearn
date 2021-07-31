@@ -1,12 +1,12 @@
-package br.com.fiap.sociallearn.ui.cursos
+package br.com.fiap.sociallearn.ui.courses
 
 import android.os.Bundle
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.ui.base.BaseActivity
 
-class SecurityCourseActivity : BaseActivity() {
+class JavaCourseActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_security_course)
+        setContentView(R.layout.activity_java_course)
     }
 }
