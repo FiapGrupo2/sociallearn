@@ -43,5 +43,30 @@ class LoginSreenTest {
             )
     }
 
+    @Test
+    fun validaCarregamento() {
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.etEmailLogin)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.etPasswordLogin)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.btLogin)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+    }
+
 
 }

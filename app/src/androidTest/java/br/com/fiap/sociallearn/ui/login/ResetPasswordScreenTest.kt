@@ -37,4 +37,22 @@ class ResetPasswordScreenTest {
             )
     }
 
+    @Test
+    fun validaCarregamento() {
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.etEmailResetPassword)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.btResetPassword)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+    }
+
 }

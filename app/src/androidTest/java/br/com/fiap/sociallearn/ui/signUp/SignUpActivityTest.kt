@@ -18,7 +18,7 @@ class SignUpActivityTest {
     var activityRule: ActivityTestRule<SignUpActivity>
             = ActivityTestRule(SignUpActivity::class.java)
 
-    @Test
+   /** @Test
     fun validaCamposEmBranco() {
         Espresso
             .onView(
@@ -30,6 +30,48 @@ class SignUpActivityTest {
         Espresso
             .onView(
                 ViewMatchers.withText(R.string.MSG_NULL_SIGN)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+    }*/
+
+    @Test
+    fun validaCarregamento() {
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.tvWelcomeSugestion)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.etUserNameSignUp)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.etEmail)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.etPasswordConfirm)
+            )
+            .check(
+                ViewAssertions.matches(ViewMatchers.isDisplayed())
+            )
+
+
+        Espresso
+            .onView(
+                ViewMatchers.withId(R.id.btCreateAccount)
             )
             .check(
                 ViewAssertions.matches(ViewMatchers.isDisplayed())
