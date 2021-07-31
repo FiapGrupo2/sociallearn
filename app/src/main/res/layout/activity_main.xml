@@ -39,106 +39,120 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:padding="8dp">
+            android:orientation="vertical"
+            android:padding="12dp">
 
             <ImageView
                 android:id="@+id/ivCursoJava"
-                android:layout_width="150dp"
-                android:layout_height="93dp"
+                android:layout_width="match_parent"
+                android:layout_height="161dp"
                 android:layout_marginStart="4dp"
-                android:src="@drawable/javacourse"
                 android:clickable="true"
                 android:onClick="@{_ -> viewModel.goToJavaActivity()}"
+                android:src="@drawable/javacourse"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
 
             <ImageView
                 android:id="@+id/ivCursoAngular"
-                android:layout_width="150dp"
-                android:layout_height="93dp"
-                android:layout_marginStart="4dp"
-                android:src="@drawable/angularcouse"
+                android:layout_width="match_parent"
                 android:clickable="true"
                 android:onClick="@{_ -> viewModel.goToAngularActivity()}"
+                android:src="@drawable/angularcouse"
+                android:layout_height="161dp"
+                android:layout_marginStart="4dp"
+                android:adjustViewBounds="true"
+                android:scaleType="fitXY"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"  />
         </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:orientation="vertical"
+        android:padding="12dp">
 
-    <ImageView
+        <ImageView
             android:id="@+id/ivCursoNode"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
             android:layout_marginStart="4dp"
-            android:src="@drawable/nodejscourse"
+            android:adjustViewBounds="true"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToNodeActivity()}"
+            android:scaleType="fitXY"
+            android:src="@drawable/nodejscourse"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"/>
 
 
         <ImageView
             android:id="@+id/ivCursoBoot"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/boostrapcourse"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToBootActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"  />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:orientation="vertical"
+        android:padding="12dp">
 
 
         <ImageView
             android:id="@+id/ivCursoFront"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/frontcourse"
+            android:layout_width="match_parent"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToFrontActivity()}"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"  />
 
 
         <ImageView
             android:id="@+id/ivCursoJavaScript"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/javascriptcourse"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToJSActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:orientation="vertical"
+        android:padding="12dp">
 
 
         <ImageView
             android:id="@+id/ivCursoJavaRuby"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/courserubyxjavascript"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToJRActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -146,75 +160,85 @@
 
         <ImageView
             android:id="@+id/ivCursoSalesforce"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/salesforcecourse"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToSalesActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"  />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:orientation="vertical"
+        android:padding="12dp">
 
 
         <ImageView
             android:id="@+id/ivCursoSecurity"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/securitycourse"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToSecurityActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
 
         <ImageView
             android:id="@+id/ivCursoSQL"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/sqlcourse"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToSQActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:padding="8dp">
+        android:orientation="vertical"
+        android:padding="12dp">
 
 
         <ImageView
             android:id="@+id/ivCursoPSQL"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/postgrecourse"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToPSQLActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"  />
 
 
 
         <ImageView
             android:id="@+id/ivCursoC"
-            android:layout_width="150dp"
-            android:layout_height="93dp"
-            android:layout_marginStart="4dp"
             android:src="@drawable/ccourse2"
             android:clickable="true"
             android:onClick="@{_ -> viewModel.goToCActivity()}"
+            android:layout_width="match_parent"
+            android:layout_height="161dp"
+            android:layout_marginStart="4dp"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"  />
     </LinearLayout>
     </LinearLayout>
 
