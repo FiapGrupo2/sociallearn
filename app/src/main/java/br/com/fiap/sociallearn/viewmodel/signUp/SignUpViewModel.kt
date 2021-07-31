@@ -3,9 +3,10 @@ package br.com.fiap.sociallearn.viewmodel.signUp
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import br.com.fiap.sociallearn.R
-import br.com.fiap.sociallearn.domain.entities.UserEntity
+import br.com.fiap.sociallearn.data.model.UserModel
 import br.com.fiap.sociallearn.domain.exceptions.GenericException
 import br.com.fiap.sociallearn.domain.useCases.signUp.MakeSignUpContract
+import java.util.*
 
 class SignUpViewModel(
     private val contract: SignUpContract,
@@ -18,14 +19,16 @@ class SignUpViewModel(
     var confirmPassword = MutableLiveData<String>()
 
     fun onNextPressed() {
-        var userEntity = UserEntity(
+        var userModel = UserModel(
             name = name.value!!,
             email = email.value!!,
             password = password.value!!,
+            Collections.emptyList(),
+            Collections.emptyList(),
             active = true
         )
 
-        makeSignUp.execute(userEntity, {
+        makeSignUp.execute(userModel, {
             contract.goToKnowledgeToLearnActivity()
         }, { error ->
             when (error) {

@@ -6,6 +6,7 @@ import br.com.fiap.sociallearn.data.login.useCases.MakeResetPassword
 import br.com.fiap.sociallearn.data.logout.useCases.MakeLogout
 import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToLearnAssociation
 import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToTeachAssociation
+import br.com.fiap.sociallearn.data.search.MakeUserSearchByContent
 import br.com.fiap.sociallearn.data.signUp.useCases.MakeSignUp
 import br.com.fiap.sociallearn.viewmodel.home.HomeContract
 import br.com.fiap.sociallearn.viewmodel.home.HomeViewModel
@@ -13,16 +14,18 @@ import br.com.fiap.sociallearn.viewmodel.login.LoginContract
 import br.com.fiap.sociallearn.viewmodel.login.LoginViewModel
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordContract
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordViewModel
+import br.com.fiap.sociallearn.viewmodel.logout.LogoutContract
+import br.com.fiap.sociallearn.viewmodel.logout.LogoutViewModel
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToLearnContract
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToLearnViewModel
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToTeachContract
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToTeachViewModel
+import br.com.fiap.sociallearn.viewmodel.search.content.UserSearchByContentContract
+import br.com.fiap.sociallearn.viewmodel.search.content.UserSearchByContentViewModel
 import br.com.fiap.sociallearn.viewmodel.signUp.SignUpContract
 import br.com.fiap.sociallearn.viewmodel.signUp.SignUpViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
-import br.com.fiap.sociallearn.viewmodel.logout.LogoutContract
-import br.com.fiap.sociallearn.viewmodel.logout.LogoutViewModel
 
 object ViewModelModules {
     val modules = module {
@@ -52,6 +55,11 @@ object ViewModelModules {
 
         viewModel { (contract: HomeContract) ->
             HomeViewModel(contract, get<MakeLogout>())
+        }
+
+
+        viewModel { (contract: UserSearchByContentContract) ->
+            UserSearchByContentViewModel(contract, get<MakeUserSearchByContent>())
         }
     }
 }

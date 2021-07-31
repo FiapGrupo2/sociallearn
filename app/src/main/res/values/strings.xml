@@ -65,4 +65,7 @@
     <string name="ERROR_GENERIC">Ocorreu um erro inesperado. Ação não concluída!</string>
     <string name="WARNING_EMPTY_LIST">Lista vazia</string>
     <string name="MSG_SUCCESS">Ação concluída com sucesso!</string>
+    <string name="app_label">SocialLearn</string>
+    <string name="search_hint">Pesquisar usuários por conteúdo</string>
+    <string name="action_delete">Limpar histórico de busca</string>
 </resources>

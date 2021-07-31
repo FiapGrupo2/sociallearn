@@ -22,7 +22,6 @@
         android:orientation="vertical"
         android:padding="32dp">
 
-
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -35,6 +34,7 @@
                 android:layout_marginStart="284dp"
                 android:paddingStart="24dp"
                 android:paddingTop="12dp"
+                android:onClick="@{() -> viewModel.onLogoutPressed()}"
                 android:src="@drawable/ic_signout"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
