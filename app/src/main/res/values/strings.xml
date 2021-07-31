@@ -34,12 +34,24 @@
     <string name="label_all">Todas as opções</string>
     <string name="label_learn_about">quer aprender sobre?</string>
     <string name="label_teach_about">quer compartilhar sobre?</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="label_descricao_java">Java é uma linguagem de programação orientada a objetos desenvolvida na década de 90 por uma equipe de programadores chefiada por James Gosling, na empresa Sun Microsystems. Em 2008 o Java foi adquirido pela empresa Oracle Corporation. Diferente das linguagens de programação modernas, que são compiladas para código nativo, a linguagem Java é compilada para um bytecode que é interpretado por uma máquina virtual. A linguagem de programação Java é a linguagem convencional da Plataforma Java, mas não é a sua única linguagem. J2ME Para programas e jogos de computador, celular, calculadoras, ou até mesmo o rádio do carro.</string>
+    <string name="label_titulo_java">Aprenda Java sem complicação</string>
+    <string name="label_descricao_angular">Angular JS na Prática Aprenda AngularJS com esse curso orientado a prática trazendo os principais conceitos desse framework de Javascript.</string>
+    <string name="label_descricao_node">Node.js é um software de código aberto, multiplataforma, baseado no interpretador V8 do Google e que permite a execução de códigos JavaScript fora de um navegador web.[6][7]O runtime de JavaScript é constituído pelos seguintes comandos: node package manage (npm), e npx (node package extractor); onde o primeiro tem o propósito de executar código armazenado num package de nodejs, instalando o software globalmente ou localmente, já o segundo tem o propósito de instalar a nível local o código instalado globalmente. Um exemplo disso é o npx create-react-app que tem como propósito instalar a nível local um template vazio de um site de react, pronto a ser usado, através de uma fórmula instalada com npm</string>
+    <string name="label_descricao_boot">O curso online Certificação Bootstrap foi criado para te levar ao próximo nível! Esse curso online tem objetivo de ensinar você a dominar Bootstrap em 57 dias. Podendo criar aplicações otimizadas e flexíveis, com Gulp, Bower, Sass, Design Responsivo e Bootstrap 4. O curso Certificação Bootstrap é composto de duas etapas.</string>
+    <string name="label_descricao_front">O front-end é onde encontramos a "cara" de um site ou aplicativo, com design, interface de navegação e ferramentas de interação com o usuário, como áreas de buscas e formulários.</string>
+    <string name="label_descricao_java_script">JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional).[2][3] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.[4]É atualmente a principal linguagem para programação client-side em navegadores web. É também bastante utilizada do lado do servidor através de ambientes como o node.js</string>
+    <string name="label_descricao_ruby_java">Ruby é uma linguagem nova em comparação às outras. Foi criada em 1995 pelo japonês Yuri Matsumoto. Uma linguagem limpa e direta toda orientada a objetos, bem simples de se aprender e trabalhar.</string>
+    <string name="label_descricao_sales">Descubra o que a Salesforce oferece</string>
+    <string name="label_descricao_security">Segurança de aplicação</string>
+    <string name="label_descricao_sql">SQL (Structured Query Language) é a linguagem padrão de manipulação de bancos de dados relacionais. Ela conta com comandos para efetuar consultas, criação e alteração de tabelas, colunas, etc.</string>
+    <string name="label_descricao_psql">PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBD), desenvolvido como projeto de código aberto.</string>
+    <string name="label_descricao_c">O C# (leia-se C-Sharp ), é uma linguagem de programação orientada a objetos, que foi desenvolvida pela Microsoft e faz parte da plataforma .NET. Embora a linguagem C# tenha sido criada do zero, foi baseada na linguagem C++ e tem muitos elementos da linguagem Pascal e Java.</string>
+    <string name="label_introducao">Introdução</string>
     <string name="button_finish">finalizar</string>
     <string name="aws">Amazon Web Services</string>
     <string name="kotlin">Kotlin</string>
     <string name="java">Java</string>
     <string name="python">Python</string>
-
+    <string name="label_home">Home</string>
 </resources>

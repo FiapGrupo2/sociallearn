@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".ui.cursos.JavaCourseActivity">
+
+
+        <ImageView
+            android:id="@+id/btInicio"
+            android:layout_width="105dp"
+            android:layout_height="76dp"
+            android:layout_marginStart="4dp"
+            android:contentDescription="@string/logo_app_content_desc"
+            android:src="@drawable/sociallearn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/btSignOut"
+            android:layout_width="64dp"
+            android:layout_height="64dp"
+            android:layout_marginStart="238dp"
+            android:paddingStart="24dp"
+            android:paddingTop="12dp"
+            android:src="@drawable/ic_signout"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btInicio"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/ivCursoSales"
+            android:layout_width="406dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="144dp"
+            android:src="@drawable/salesforcecourse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvDescricao"
+            android:layout_width="373dp"
+            android:layout_height="152dp"
+            android:layout_marginStart="19dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="19dp"
+            android:text="@string/label_descricao_sales"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCursoSales" />
+
+        <TextView
+            android:id="@+id/tvIntroducao"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="38dp"
+            android:layout_marginEnd="324dp"
+            android:text="@string/label_introducao"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCursoSales" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
