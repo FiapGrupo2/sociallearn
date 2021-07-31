@@ -18,20 +18,24 @@ class SignUpViewModel(
     var confirmPassword = MutableLiveData<String>()
 
     fun onNextPressed() {
-        var userEntity = UserEntity(
-            name = name.value!!,
-            email = email.value!!,
-            password = password.value!!,
-            active = true
-        )
+        if (email?.value != null && password?.value != null && password.value != null && confirmPassword.value != null) {
+            var userEntity = UserEntity(
+                name = name.value!!,
+                email = email.value!!,
+                password = password.value!!,
+                active = true
+            )
 
-        makeSignUp.execute(userEntity, {
-            contract.goToKnowledgeToLearnActivity()
-        }, { error ->
-            when (error) {
-                GenericException.GENERIC_ERROR -> contract.showMessage(R.string.ERROR_GENERIC)
-            }
-        })
+            makeSignUp.execute(userEntity, {
+                contract.goToKnowledgeToLearnActivity()
+            }, { error ->
+                when (error) {
+                    GenericException.GENERIC_ERROR -> contract.showMessage(R.string.ERROR_GENERIC)
+                }
+            })
+        } else {
+            contract.showMessage(R.string.MSG_NULL_SIGN)
+        }
     }
 
 }

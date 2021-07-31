@@ -125,8 +125,14 @@
                 <Button
                     android:id="@+id/btCreateAccount"
                     style="@style/button"
-                    android:text="@string/button_next"
-                    android:onClick="@{() -> viewModel.onNextPressed()}"/>
+                    android:onClick="@{() -> viewModel.onNextPressed()}"
+                    android:text="@string/button_next" />
+
+                <TextView
+                    android:id="@+id/tvError"
+                    style="@style/field_error"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
             </LinearLayout>
         </LinearLayout>
     </ScrollView>

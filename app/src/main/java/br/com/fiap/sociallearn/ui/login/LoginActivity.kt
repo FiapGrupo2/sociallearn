@@ -45,6 +45,9 @@ class LoginActivity : AppCompatActivity(), LoginContract {
     }
 
     override fun showMessage(resId: Int) {
+        if (resId == R.string.MSG_NULL_LOGIN) {
+           binding.tvError.text = "E-mail e senha precisam estar preenchidos!"
+        }
         UtilToast.showMessage(this, resId);
     }
 }

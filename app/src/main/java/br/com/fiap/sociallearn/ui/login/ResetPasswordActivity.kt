@@ -28,6 +28,10 @@ class ResetPasswordActivity : AppCompatActivity(), ResetPasswordContract {
     }
 
     override fun showMessage(resId: Int) {
+        if (resId == R.string.MSG_NULL_RESET) {
+            binding.tvError.text = "E-mail precisa estar preenchido!"
+        }
+
         UtilToast.showMessage(this, resId);
     }
 }

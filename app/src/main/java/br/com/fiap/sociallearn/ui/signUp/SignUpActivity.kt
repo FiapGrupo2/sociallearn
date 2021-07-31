@@ -34,6 +34,9 @@ class SignUpActivity : AppCompatActivity(), SignUpContract {
     }
 
     override fun showMessage(resId: Int) {
+        if (resId == R.string.MSG_NULL_SIGN) {
+            binding.tvError.text = "Todos os campos precisam estar preenchido!"
+        }
         UtilToast.showMessage(this, resId);
     }
 }

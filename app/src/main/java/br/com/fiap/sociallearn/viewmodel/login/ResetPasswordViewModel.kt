@@ -14,14 +14,18 @@ class ResetPasswordViewModel(
     var email = MutableLiveData<String>()
 
     fun onSendNewPasswordPressed() {
-        makeResetPassword.execute(email.value!!, {
-            contract.showMessage(R.string.MSG_SUCCESS)
-            contract.goToLoginActivity()
-        }, { error ->
-            when (error) {
-                GenericException.GENERIC_ERROR -> contract.showMessage(R.string.ERROR_GENERIC)
+        if (email?.value != null) {
+            makeResetPassword.execute(email.value!!, {
+                contract.showMessage(R.string.MSG_SUCCESS)
+                contract.goToLoginActivity()
+            }, { error ->
+                when (error) {
+                    GenericException.GENERIC_ERROR -> contract.showMessage(R.string.ERROR_GENERIC)
+                }
             }
+            )
+        } else {
+            contract.showMessage(R.string.MSG_NULL_RESET)
         }
-        )
     }
 }
