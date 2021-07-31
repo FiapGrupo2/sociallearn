@@ -1,5 +1,6 @@
 package br.com.fiap.sociallearn.ui.courses
 
+
 import androidx.test.espresso.Espresso
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
@@ -15,25 +16,11 @@ import org.junit.runner.RunWith
 class AngularCursoScreenTest {
 
     @get:Rule
-    var activityRule: ActivityTestRule<AngularCursoActivity>
-            = ActivityTestRule(AngularCursoActivity::class.java)
+    var activityRule: ActivityTestRule<AngularCourseActivity>
+            = ActivityTestRule(AngularCourseActivity::class.java)
 
     @Test
     fun validaCarregamentoInformacao() {
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.btInicio)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.btSignOut)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
         Espresso
             .onView(
                 ViewMatchers.withId(R.id.ivCursoAngular)

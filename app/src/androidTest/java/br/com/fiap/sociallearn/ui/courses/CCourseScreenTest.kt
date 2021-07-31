@@ -14,25 +14,11 @@ import org.junit.runner.RunWith
 @RunWith(AndroidJUnit4::class)
 class CCourseScreenTest {
     @get:Rule
-    var activityRule: ActivityTestRule<CCourseActivity>
-            = ActivityTestRule(CCourseActivity::class.java)
+    var activityRule: ActivityTestRule<CSharpCourseActivity>
+            = ActivityTestRule(CSharpCourseActivity::class.java)
 
     @Test
     fun validaCarregamentoInformacao() {
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.btInicio)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.btSignOut)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
         Espresso
             .onView(
                 ViewMatchers.withId(R.id.ivCursoC)
