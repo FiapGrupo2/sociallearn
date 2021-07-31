@@ -42,33 +42,5 @@ class HomeScreenTest {
             .check(
                 ViewAssertions.matches(ViewMatchers.isDisplayed())
             )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.ivCursoBoot)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.ivCursoFront)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.ivCursoJavaScript)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.ivCursoJavaRuby)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
     }
 }
