@@ -7,6 +7,7 @@ import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.domain.exceptions.GenericException
 import br.com.fiap.sociallearn.domain.useCases.login.CheckUserIsLoggedContract
 import br.com.fiap.sociallearn.domain.useCases.login.MakeLoginContract
+import br.com.fiap.sociallearn.utils.UtilToast
 
 class LoginViewModel(
     private val contract: LoginContract,
@@ -24,21 +25,25 @@ class LoginViewModel(
     }
 
     fun onLoginPressed() {
-        makeLogin.execute(email.value!!, password.value!!, {
-            contract.showMessage(R.string.MSG_SUCCESS)
-            contract.goToMainActivity()
-        }, { error ->
-            when (error) {
-                GenericException.ERROR_INVALID_EMAIL -> contract.showMessage(R.string.ERROR_INVALID_EMAIL)
-                GenericException.ERROR_WRONG_PASSWORD -> contract.showMessage(R.string.ERROR_WRONG_PASSWORD)
-                GenericException.ERROR_USER_MISMATCH -> contract.showMessage(R.string.ERROR_USER_MISMATCH)
-                GenericException.ERROR_EMAIL_ALREADY_IN_USE -> contract.showMessage(R.string.ERROR_EMAIL_ALREADY_IN_USE)
-                GenericException.ERROR_USER_DISABLED -> contract.showMessage(R.string.ERROR_USER_DISABLED)
-                GenericException.ERROR_OPERATION_NOT_ALLOWED -> contract.showMessage(R.string.ERROR_OPERATION_NOT_ALLOWED)
-                GenericException.GENERIC_ERROR -> contract.showMessage(R.string.ERROR_GENERIC)
+        if (email?.value != null && password?.value != null) {
+            makeLogin.execute(email.value!!, password.value!!, {
+                contract.showMessage(R.string.MSG_SUCCESS)
+                contract.goToMainActivity()
+            }, { error ->
+                when (error) {
+                    GenericException.ERROR_INVALID_EMAIL -> contract.showMessage(R.string.ERROR_INVALID_EMAIL)
+                    GenericException.ERROR_WRONG_PASSWORD -> contract.showMessage(R.string.ERROR_WRONG_PASSWORD)
+                    GenericException.ERROR_USER_MISMATCH -> contract.showMessage(R.string.ERROR_USER_MISMATCH)
+                    GenericException.ERROR_EMAIL_ALREADY_IN_USE -> contract.showMessage(R.string.ERROR_EMAIL_ALREADY_IN_USE)
+                    GenericException.ERROR_USER_DISABLED -> contract.showMessage(R.string.ERROR_USER_DISABLED)
+                    GenericException.ERROR_OPERATION_NOT_ALLOWED -> contract.showMessage(R.string.ERROR_OPERATION_NOT_ALLOWED)
+                    GenericException.GENERIC_ERROR -> contract.showMessage(R.string.ERROR_GENERIC)
+                }
             }
+            )
+        } else {
+            contract.showMessage(R.string.ERROR_NULL_LOGIN)
         }
-        )
     }
 
     fun onResetPasswordPressed() {

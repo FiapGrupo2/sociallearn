@@ -42,8 +42,8 @@
     <string name="label_descricao_front">O front-end é onde encontramos a "cara" de um site ou aplicativo, com design, interface de navegação e ferramentas de interação com o usuário, como áreas de buscas e formulários.</string>
     <string name="label_descricao_java_script">JavaScript (frequentemente abreviado como JS) é uma linguagem de programação interpretada estruturada, de script em alto nível com tipagem dinâmica fraca e multiparadigma (protótipos, orientado a objeto, imperativo e, funcional).[2][3] Juntamente com HTML e CSS, o JavaScript é uma das três principais tecnologias da World Wide Web. JavaScript permite páginas da Web interativas e, portanto, é uma parte essencial dos aplicativos da web. A grande maioria dos sites usa, e todos os principais navegadores têm um mecanismo JavaScript dedicado para executá-lo.[4]É atualmente a principal linguagem para programação client-side em navegadores web. É também bastante utilizada do lado do servidor através de ambientes como o node.js</string>
     <string name="label_descricao_ruby_java">Ruby é uma linguagem nova em comparação às outras. Foi criada em 1995 pelo japonês Yuri Matsumoto. Uma linguagem limpa e direta toda orientada a objetos, bem simples de se aprender e trabalhar.</string>
-    <string name="label_descricao_sales">Descubra o que a Salesforce oferece</string>
-    <string name="label_descricao_security">Segurança de aplicação</string>
+    <string name="label_descricao_sales">DSalesforce. A Salesforce foi fundada em 1999, nos Estados Unidos, por Marc Benioff, ex-executivo da Oracle. Atualmente, a companhia é uma das líderes mundiais em soluções de CRM, conhecida, principalmente, pela plataforma Sales Cloud.</string>
+    <string name="label_descricao_security">A preocupação com a segurança das aplicações fica além dos PC´s. Com a popularização dos smartphones, aplicações desenvolvidas para iOS e Android tem se tornado alvo dos crackers e as previsões indicam que em pouco tempo a quantidade de ataques direcionada aos dispositivos móveis será ainda maior que a dos desktops</string>
     <string name="label_descricao_sql">SQL (Structured Query Language) é a linguagem padrão de manipulação de bancos de dados relacionais. Ela conta com comandos para efetuar consultas, criação e alteração de tabelas, colunas, etc.</string>
     <string name="label_descricao_psql">PostgreSQL é um sistema gerenciador de banco de dados objeto relacional (SGBD), desenvolvido como projeto de código aberto.</string>
     <string name="label_descricao_c">O C# (leia-se C-Sharp ), é uma linguagem de programação orientada a objetos, que foi desenvolvida pela Microsoft e faz parte da plataforma .NET. Embora a linguagem C# tenha sido criada do zero, foi baseada na linguagem C++ e tem muitos elementos da linguagem Pascal e Java.</string>
@@ -65,4 +65,9 @@
     <string name="ERROR_GENERIC">Ocorreu um erro inesperado. Ação não concluída!</string>
     <string name="WARNING_EMPTY_LIST">Lista vazia</string>
     <string name="MSG_SUCCESS">Ação concluída com sucesso!</string>
+    <string name="ERROR_NULL_LOGIN">E-mail e senha precisam estar preenchidos!</string>
+    <string name="ERROR_NULL_RESET">E-mail precisa estar preenchido!</string>
+    <string name="ERROR_NULL_SIGN">Todos os campos precisam estar preenchido!</string>
+    <string name="ERROR_DIF_PASS">As senhas digitadas não são iguais</string>
+    <string name="ERROR_EMAIL_INVALIDO">E-mail invalído!</string>
 </resources>
