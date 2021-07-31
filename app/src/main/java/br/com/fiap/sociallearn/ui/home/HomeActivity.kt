@@ -6,13 +6,12 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.AppCompatImageView
 import androidx.databinding.DataBindingUtil
 import br.com.fiap.sociallearn.R
-import br.com.fiap.sociallearn.databinding.ActivityLoginBinding
 import br.com.fiap.sociallearn.databinding.ActivityMainBindingImpl
 import br.com.fiap.sociallearn.ui.cursos.*
 import br.com.fiap.sociallearn.ui.login.LoginActivity
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.home.HomeContract
 import br.com.fiap.sociallearn.viewmodel.home.HomeViewModel
-import br.com.fiap.sociallearn.viewmodel.login.LoginViewModel
 import br.com.fiap.sociallearn.viewmodel.logout.LogoutContract
 import br.com.fiap.sociallearn.viewmodel.logout.LogoutViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -99,7 +98,7 @@ class HomeActivity : AppCompatActivity(), LogoutContract , HomeContract{
         startActivity(Intent(this, CCourseActivity::class.java))
     }
 
-    override fun showGenericErrorMessage() {
-        TODO("Not yet implemented")
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }

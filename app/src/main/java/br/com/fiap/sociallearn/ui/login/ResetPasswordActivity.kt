@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.databinding.ActivityResetPasswordBinding
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordContract
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -26,7 +27,7 @@ class ResetPasswordActivity : AppCompatActivity(), ResetPasswordContract {
         startActivity(Intent(this, LoginActivity::class.java))
     }
 
-    override fun showGenericErrorMessage() {
-        TODO("Not yet implemented")
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }

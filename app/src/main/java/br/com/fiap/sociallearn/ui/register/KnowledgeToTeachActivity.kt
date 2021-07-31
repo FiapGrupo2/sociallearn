@@ -7,6 +7,7 @@ import androidx.databinding.DataBindingUtil
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.databinding.ActivityKnowledgeToTeachBinding
 import br.com.fiap.sociallearn.ui.home.HomeActivity
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToTeachContract
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToTeachViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -25,6 +26,10 @@ class KnowledgeToTeachActivity : AppCompatActivity(), KnowledgeToTeachContract {
 
     override fun goToHomeActivity() {
         startActivity(Intent(this, HomeActivity::class.java))
+    }
+
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 
 }

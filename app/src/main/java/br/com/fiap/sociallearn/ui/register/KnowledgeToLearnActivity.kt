@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.databinding.ActivityKnowledgeToLearnBinding
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToLearnContract
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToLearnViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -24,5 +25,9 @@ class KnowledgeToLearnActivity : AppCompatActivity(), KnowledgeToLearnContract {
 
     override fun goToKnowledgeToTeachActivity() {
         startActivity(Intent(this, KnowledgeToTeachActivity::class.java))
+    }
+
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }

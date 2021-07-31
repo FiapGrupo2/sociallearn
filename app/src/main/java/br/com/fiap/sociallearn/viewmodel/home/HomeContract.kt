@@ -15,4 +15,5 @@ interface HomeContract {
     fun goToPSQLActivity()
     fun goToCActivity()
     fun showGenericErrorMessage()
+    fun showMessage(restId: Int)
 }
