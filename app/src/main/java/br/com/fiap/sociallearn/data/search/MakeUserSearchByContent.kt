@@ -10,7 +10,7 @@ class MakeUserSearchByContent : MakeUserSearchByContentContract {
 
     override fun execute(content: String): Task<QuerySnapshot> {
         return db.collection("users")
-            .whereArrayContains("knowledgeToTeach", content)
+            .whereArrayContains("knowledgeToTeach", content.uppercase())
             .whereEqualTo("active", true)
             .get()
     }

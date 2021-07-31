@@ -20,7 +20,7 @@ class MakeKnowledgeToLearnAssociation : MakeKnowledgeToLearnAssociationContract 
     ) {
         db.collection("users")
             .document(mAuth.currentUser?.email!!)
-            .update("knowledgeToLearn", knowledgeToLearnList)
+            .update("knowledgeToLearn", knowledgeToLearnList.map { k -> k.uppercase() })
             .addOnSuccessListener {
                 onSuccessListener()
             }

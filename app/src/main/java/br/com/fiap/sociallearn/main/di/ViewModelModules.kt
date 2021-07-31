@@ -8,6 +8,8 @@ import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToLearnAssoci
 import br.com.fiap.sociallearn.data.register.useCases.MakeKnowledgeToTeachAssociation
 import br.com.fiap.sociallearn.data.search.MakeUserSearchByContent
 import br.com.fiap.sociallearn.data.signUp.useCases.MakeSignUp
+import br.com.fiap.sociallearn.viewmodel.base.BaseContract
+import br.com.fiap.sociallearn.viewmodel.base.BaseViewModel
 import br.com.fiap.sociallearn.viewmodel.home.HomeContract
 import br.com.fiap.sociallearn.viewmodel.home.HomeViewModel
 import br.com.fiap.sociallearn.viewmodel.login.LoginContract
@@ -26,6 +28,7 @@ import br.com.fiap.sociallearn.viewmodel.signUp.SignUpContract
 import br.com.fiap.sociallearn.viewmodel.signUp.SignUpViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
+import kotlin.contracts.contract
 
 object ViewModelModules {
     val modules = module {
@@ -60,6 +63,10 @@ object ViewModelModules {
 
         viewModel { (contract: UserSearchByContentContract) ->
             UserSearchByContentViewModel(contract, get<MakeUserSearchByContent>())
+        }
+
+        viewModel { (contract: BaseContract) ->
+            BaseViewModel(contract)
         }
     }
 }

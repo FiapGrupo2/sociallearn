@@ -15,5 +15,4 @@ interface HomeContract {
     fun goToPSQLActivity()
     fun goToCActivity()
     fun showMessage(restId: Int)
-    fun goToUserListResultActivity(contentQuery: String)
 }
