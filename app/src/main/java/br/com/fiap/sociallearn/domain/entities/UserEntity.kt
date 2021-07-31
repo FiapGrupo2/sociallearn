@@ -7,8 +7,8 @@ import java.io.Serializable
 class UserEntity(
     var name: String,
     var email: String,
-    var password: String,
-    var active: Boolean,
+    var knowledgeToLearn: MutableList<String>,
+    var knowledgeToTeach: MutableList<String>,
 ) : Serializable {
 
 }

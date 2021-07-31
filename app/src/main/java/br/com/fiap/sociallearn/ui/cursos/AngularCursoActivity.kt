@@ -20,7 +20,7 @@ class AngularCursoActivity : AppCompatActivity() , LogoutContract {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_angular_curso)
+        setContentView(R.layout.activity_angular_course)
 
         btInicio = findViewById(R.id.btInicio)
         btInicio.setOnClickListener {
