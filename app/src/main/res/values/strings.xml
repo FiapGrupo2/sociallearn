@@ -70,7 +70,7 @@
     <string name="ERROR_NULL_SIGN">Todos os campos precisam estar preenchido!</string>
     <string name="ERROR_DIF_PASS">As senhas digitadas não são iguais</string>
     <string name="ERROR_EMAIL_INVALIDO">E-mail invalído!</string>
-    <string name="app_label">SocialLearn</string>
+    <string name="app_label">Social Learn</string>
     <string name="search_hint">Pesquisar usuários por conteúdo</string>
     <string name="action_delete">Limpar histórico de busca</string>
 </resources>

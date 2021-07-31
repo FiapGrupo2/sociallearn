@@ -5,16 +5,12 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.SearchRecentSuggestions
 import android.util.Log
-import android.view.Menu
-import android.view.MenuItem
-import android.widget.SearchView
-import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.SearchableProvider
 import br.com.fiap.sociallearn.databinding.ActivityUserSearchByContentBinding
-import br.com.fiap.sociallearn.domain.entities.UserEntity
+import br.com.fiap.sociallearn.domain.entities.UserEntityResponse
 import br.com.fiap.sociallearn.ui.base.BaseActivity
 import br.com.fiap.sociallearn.ui.search.adapter.SearchUserAdapter
 import br.com.fiap.sociallearn.viewmodel.search.content.UserSearchByContentContract
@@ -41,13 +37,13 @@ class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract 
 
     private fun showResults() {
         handleSearch(intent)!!.addOnCompleteListener { task ->
-            val userList = ArrayList<UserEntity>()
+            val userList = ArrayList<UserEntityResponse>()
 
             if (task.isSuccessful) {
                 for (document in task.result.documents) {
                     Log.i("e-mail", document.get("email").toString())
 
-                    val user = UserEntity(
+                    val user = UserEntityResponse(
                         name = document.get("name").toString(),
                         email = document.get("email").toString(),
                         knowledgeToLearn = document.get("knowledgeToLearn") as MutableList<String>,

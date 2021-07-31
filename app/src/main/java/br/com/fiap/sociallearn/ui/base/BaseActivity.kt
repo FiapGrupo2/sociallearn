@@ -9,6 +9,7 @@ import androidx.appcompat.app.AppCompatActivity
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.ui.login.LoginActivity
 import br.com.fiap.sociallearn.ui.search.UserSearchByContentActivity
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.base.BaseContract
 import br.com.fiap.sociallearn.viewmodel.base.BaseViewModel
 import org.koin.android.viewmodel.ext.android.viewModel
@@ -65,5 +66,9 @@ open class BaseActivity : AppCompatActivity(), BaseContract {
 
     override fun goToLoginActivity() {
         startActivity(Intent(this, LoginActivity::class.java))
+    }
+
+    override fun showMessage(resId: Int) {
+        UtilToast.showMessage(this, resId);
     }
 }

@@ -1,6 +1,6 @@
 package br.com.fiap.sociallearn.data.model
 
-class UserModel(
+data class UserModel(
     var name: String,
     var email: String,
     var password: String,

@@ -16,8 +16,6 @@ import br.com.fiap.sociallearn.viewmodel.login.LoginContract
 import br.com.fiap.sociallearn.viewmodel.login.LoginViewModel
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordContract
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordViewModel
-import br.com.fiap.sociallearn.viewmodel.logout.LogoutContract
-import br.com.fiap.sociallearn.viewmodel.logout.LogoutViewModel
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToLearnContract
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToLearnViewModel
 import br.com.fiap.sociallearn.viewmodel.register.KnowledgeToTeachContract
@@ -28,14 +26,9 @@ import br.com.fiap.sociallearn.viewmodel.signUp.SignUpContract
 import br.com.fiap.sociallearn.viewmodel.signUp.SignUpViewModel
 import org.koin.android.viewmodel.dsl.viewModel
 import org.koin.dsl.module
-import kotlin.contracts.contract
 
 object ViewModelModules {
     val modules = module {
-        viewModel { (contract: LogoutContract) ->
-            LogoutViewModel(contract, get<MakeLogout>())
-        }
-
         viewModel { (contract: LoginContract) ->
             LoginViewModel(contract, get<CheckUserIsLogged>(), get<MakeLogin>())
         }

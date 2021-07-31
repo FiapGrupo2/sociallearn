@@ -1,9 +1,8 @@
 package br.com.fiap.sociallearn.data.signUp.useCases
 
-import android.util.Patterns
 import androidx.lifecycle.MutableLiveData
 import br.com.fiap.sociallearn.data.model.UserModel
-import br.com.fiap.sociallearn.domain.entities.UserEntity
+import br.com.fiap.sociallearn.domain.entities.UserEntityRequest
 import br.com.fiap.sociallearn.domain.exceptions.EmailInvalidException
 import br.com.fiap.sociallearn.domain.exceptions.GenericException
 import br.com.fiap.sociallearn.domain.exceptions.PasswordInvalidException
@@ -13,7 +12,6 @@ import br.com.fiap.sociallearn.helpers.RequestState
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.firestore.FirebaseFirestore
-import java.util.regex.Pattern
 
 class MakeSignUp : MakeSignUpContract {
     private var mAuth: FirebaseAuth = FirebaseAuth.getInstance()
@@ -21,7 +19,7 @@ class MakeSignUp : MakeSignUpContract {
     private val signUpState = MutableLiveData<RequestState<FirebaseUser>>()
 
     override fun execute(
-        newUser: UserModel,
+        newUser: UserEntityRequest,
         onSuccessListener: () -> Unit,
         onFailureListener: (GenericException) -> Unit
     ) {
@@ -34,7 +32,7 @@ class MakeSignUp : MakeSignUpContract {
             )
                 .addOnSuccessListener {
                     onSuccessListener()
-                    saveInFirestore(newUser)
+                    saveInFirestore(newUser.toModel())
                 }.addOnFailureListener { e ->
                     signUpState.value = RequestState.Error(
                         Throwable(
@@ -45,8 +43,7 @@ class MakeSignUp : MakeSignUpContract {
         }
     }
 
-    private fun validateFields(newUser: UserModel): Boolean {
-
+    private fun validateFields(newUser: UserEntityRequest): Boolean {
         if (newUser.name.isEmpty()) {
             signUpState.value = RequestState.Error(Throwable("Informe o nome do usuário"))
             return false
@@ -66,6 +63,12 @@ class MakeSignUp : MakeSignUpContract {
             signUpState.value =
                 RequestState.Error(PasswordInvalidException("Senha deve ter no mínimo 6 caracteres"))
             return false
+        }
+
+        if (newUser.password != newUser.confirmPassword) {
+            signUpState.value =
+                RequestState.Error(PasswordInvalidException("Senhas não coincidentes"))
+            return false;
         }
 
         return true
