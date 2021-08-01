@@ -18,25 +18,6 @@ class SignUpActivityTest {
     var activityRule: ActivityTestRule<SignUpActivity>
             = ActivityTestRule(SignUpActivity::class.java)
 
-   /** @Test
-    fun validaCamposEmBranco() {
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.btCreateAccount)
-            )
-            .perform(
-                ViewActions.click()
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withText(R.string.ERROR_NULL_SIGN)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-    }*/
-
-
     @Test
     fun validaCarregamento() {
         Espresso
