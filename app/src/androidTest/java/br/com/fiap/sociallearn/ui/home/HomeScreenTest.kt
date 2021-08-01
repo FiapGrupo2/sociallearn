@@ -20,27 +20,13 @@ class HomeScreenTest {
             = ActivityTestRule(HomeActivity::class.java)
 
     @Test
-    fun validaCarregamentoCursos() {
+    fun validaCarregamentoCarousel() {
         Espresso
             .onView(
-                ViewMatchers.withId(R.id.ivCursoJava)
+                ViewMatchers.withId(R.id.carousel)
             )
             .check(
             ViewAssertions.matches(ViewMatchers.isDisplayed())
         )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.ivCursoAngular)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
-        Espresso
-            .onView(
-                ViewMatchers.withId(R.id.ivCursoNode)
-            )
-            .check(
-                ViewAssertions.matches(ViewMatchers.isDisplayed())
-            )
     }
 }

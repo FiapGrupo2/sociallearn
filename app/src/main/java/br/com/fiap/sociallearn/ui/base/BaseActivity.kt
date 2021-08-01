@@ -23,7 +23,6 @@ open class BaseActivity : AppCompatActivity(), BaseContract {
 
         val searchBtn = menu?.findItem(R.id.search)
         val searchEditText = searchBtn?.actionView as SearchView
-        searchEditText.setQuery(getResources().getString(R.string.search_hint), false);
 
         searchEditText.setOnQueryTextListener(
             object : SearchView.OnQueryTextListener {
@@ -36,9 +35,6 @@ open class BaseActivity : AppCompatActivity(), BaseContract {
                 override fun onQueryTextSubmit(query: String?): Boolean {
                     Log.i("status", "submit")
                     goToUserListResultActivity(query!!)
-                    if (searchEditText.getQuery() == null) {
-                        searchEditText.setQuery(getResources().getString(R.string.search_hint), false);
-                    }
                     return false
                 }
             }
