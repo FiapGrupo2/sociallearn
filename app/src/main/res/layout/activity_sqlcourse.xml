@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
+        android:background="@color/secondaryBackground"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.courses.JavaCourseActivity">
@@ -24,6 +25,7 @@
             android:layout_width="373dp"
             android:layout_height="152dp"
             android:layout_marginStart="19dp"
+            android:textColor="#FFF"
             android:layout_marginTop="80dp"
             android:layout_marginEnd="19dp"
             android:text="@string/label_descricao_sql"
@@ -34,6 +36,7 @@
 
         <TextView
             android:id="@+id/tvIntroducao"
+            android:textColor="#FFF"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"

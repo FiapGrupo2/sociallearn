@@ -55,7 +55,7 @@ class HomeViewModel(
     }
 
     fun goToSQActivity() {
-        contract.goToSQActivity()
+        contract.goToSQLActivity()
     }
 
     fun goToPSQLActivity() {

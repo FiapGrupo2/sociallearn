@@ -4,37 +4,40 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <androidx.constraintlayout.widget.ConstraintLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".ui.courses.JavaCourseActivity">
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/secondaryBackground"
+        tools:context=".ui.courses.JavaCourseActivity">
 
-    <ImageView
-        android:id="@+id/ivCursoJava3"
-        android:layout_width="406dp"
-        android:layout_height="154dp"
-        android:layout_marginTop="144dp"
-        android:src="@drawable/javacourse"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:id="@+id/ivCursoJava3"
+            android:layout_width="406dp"
+            android:layout_height="154dp"
+            android:layout_marginTop="144dp"
+            android:src="@drawable/javacourse"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/tvDescricao"
-        android:layout_width="373dp"
-        android:layout_height="152dp"
-        android:layout_marginStart="19dp"
-        android:layout_marginTop="80dp"
-        android:layout_marginEnd="19dp"
-        android:text="@string/label_descricao_java"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ivCursoJava3" />
+        <TextView
+            android:id="@+id/tvDescricao"
+            android:layout_width="373dp"
+            android:layout_height="152dp"
+            android:layout_marginStart="19dp"
+            android:textColor="#FFF"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="19dp"
+            android:text="@string/label_descricao_java"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivCursoJava3" />
 
         <TextView
             android:id="@+id/tvIntroducao"
             android:layout_width="wrap_content"
+            android:textColor="#FFF"
             android:layout_height="wrap_content"
             android:layout_marginStart="20dp"
             android:layout_marginTop="38dp"
@@ -43,5 +46,5 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ivCursoJava3" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </layout>

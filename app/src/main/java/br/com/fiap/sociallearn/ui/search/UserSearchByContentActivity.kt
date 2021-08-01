@@ -19,8 +19,6 @@ import br.com.fiap.sociallearn.viewmodel.search.content.UserSearchByContentViewM
 import com.google.android.gms.tasks.Task
 import com.google.firebase.firestore.QuerySnapshot
 import kotlinx.android.synthetic.main.activity_user_search_by_content.*
-import kotlinx.android.synthetic.main.activity_user_search_by_content.view.*
-import kotlinx.android.synthetic.main.user_search_list.view.*
 import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
@@ -62,7 +60,8 @@ class UserSearchByContentActivity : BaseActivity(), UserSearchByContentContract 
 
                 val recyclerView = user_list_recyclerview
                 recyclerView.adapter = SearchUserAdapter(userList, this)
-                val layoutManager = StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
+                val layoutManager =
+                    StaggeredGridLayoutManager(1, StaggeredGridLayoutManager.VERTICAL)
                 recyclerView.layoutManager = layoutManager
                 binding.tvEmptyView.setVisibility(View.GONE)
                 binding.userListRecyclerview.setVisibility(View.VISIBLE)

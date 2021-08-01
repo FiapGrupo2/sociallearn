@@ -11,7 +11,7 @@ interface HomeContract {
     fun goToJRActivity()
     fun goToSalesActivity()
     fun goToSecurityActivity()
-    fun goToSQActivity()
+    fun goToSQLActivity()
     fun goToPSQLActivity()
     fun goToCActivity()
 }
