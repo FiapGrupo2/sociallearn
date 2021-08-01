@@ -27,6 +27,7 @@
     <string name="loading_message_processing">Carregando</string>
     <string name="hello">Ola</string>
     <string name="welcome_sugestions">Olá, separamos algumas sugestões para você!</string>
+    <string name="welcome_tips">Sempre que desejar, use a busca para encontrar pessoas que possam ajudar com o tema desajado!</string>
     <string name="label_genero">genero</string>
     <string name="label_what_want_todo">selecione o que quer fazer</string>
     <string name="label_learn">Aprender</string>
