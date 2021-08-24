@@ -5,7 +5,7 @@ PROJETO DE ENTREGA PARA O DIA 31/07/2021
 ---
 ## Framework e IDE
 
-* Kotlin 1.5.20;
+* Kotlin 1.5.21;
 * Android Studio 4.2.2;
 * Mysql 8.0.24
 

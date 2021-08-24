@@ -12,9 +12,8 @@ import br.com.fiap.sociallearn.ui.search.UserSearchByContentActivity
 import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.base.BaseContract
 import br.com.fiap.sociallearn.viewmodel.base.BaseViewModel
-import org.koin.android.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
-
+import org.koin.androidx.viewmodel.ext.android.viewModel
 open class BaseActivity : AppCompatActivity(), BaseContract {
     private val viewModel: BaseViewModel by viewModel { parametersOf(this) }
 

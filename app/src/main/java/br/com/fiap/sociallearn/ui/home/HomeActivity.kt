@@ -14,7 +14,8 @@ import br.com.fiap.sociallearn.viewmodel.home.HomeViewModel
 import com.synnapps.carouselview.CarouselView
 import com.synnapps.carouselview.ImageClickListener
 import com.synnapps.carouselview.ImageListener
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
+
 import org.koin.core.parameter.parametersOf
 
 class HomeActivity : BaseActivity(), HomeContract {

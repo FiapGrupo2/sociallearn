@@ -1,17 +1,17 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
 buildscript {
     ext.kotlin_version = "1.5.21"
-    ext.koin_version = "2.2.3"
+    ext.koin_version = '3.1.2'
     repositories {
         google()
         mavenCentral()
     }
 
     dependencies {
-        classpath "com.android.tools.build:gradle:4.2.2"
+        classpath 'com.android.tools.build:gradle:7.0.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "io.insert-koin:koin-gradle-plugin:$koin_version"
-        classpath 'com.google.gms:google-services:4.3.8'
+        classpath 'com.google.gms:google-services:4.3.10'
 
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -24,6 +24,13 @@ allprojects {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            url = uri("https://repo1.maven.org/maven2")
+        }
+
+        maven {
+            url = uri('https://jitpack.io')
+        }
     }
 }
 

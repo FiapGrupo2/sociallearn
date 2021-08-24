@@ -11,7 +11,7 @@ import br.com.fiap.sociallearn.ui.signUp.SignUpActivity
 import br.com.fiap.sociallearn.utils.UtilToast;
 import br.com.fiap.sociallearn.viewmodel.login.LoginContract
 import br.com.fiap.sociallearn.viewmodel.login.LoginViewModel
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
 

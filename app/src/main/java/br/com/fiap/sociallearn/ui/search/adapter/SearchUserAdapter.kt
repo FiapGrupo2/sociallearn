@@ -4,10 +4,10 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.domain.entities.UserEntityResponse
-import kotlinx.android.synthetic.main.user_search_list.view.*
 
 
 class SearchUserAdapter(
@@ -22,8 +22,9 @@ class SearchUserAdapter(
      */
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         fun bindView(user: UserEntityResponse) {
-            val userName = itemView.userName
-            val email = itemView.email
+
+            val userName = itemView.findViewById<TextView>(R.id.userName)
+            val email = itemView.findViewById<TextView>(R.id.email)
 
             userName.text = user.name
             email.text = user.email

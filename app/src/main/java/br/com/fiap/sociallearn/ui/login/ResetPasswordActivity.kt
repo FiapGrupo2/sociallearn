@@ -9,7 +9,7 @@ import br.com.fiap.sociallearn.databinding.ActivityResetPasswordBinding
 import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordContract
 import br.com.fiap.sociallearn.viewmodel.login.ResetPasswordViewModel
-import org.koin.android.viewmodel.ext.android.viewModel
+import org.koin.androidx.viewmodel.ext.android.viewModel
 import org.koin.core.parameter.parametersOf
 
 class ResetPasswordActivity : AppCompatActivity(), ResetPasswordContract {
