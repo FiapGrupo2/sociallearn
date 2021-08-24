@@ -1,5 +1,6 @@
 package br.com.fiap.sociallearn.ui.login
 
+import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
@@ -8,7 +9,7 @@ import br.com.fiap.sociallearn.R
 import br.com.fiap.sociallearn.databinding.ActivityLoginBinding
 import br.com.fiap.sociallearn.ui.home.HomeActivity
 import br.com.fiap.sociallearn.ui.signUp.SignUpActivity
-import br.com.fiap.sociallearn.utils.UtilToast;
+import br.com.fiap.sociallearn.utils.UtilToast
 import br.com.fiap.sociallearn.viewmodel.login.LoginContract
 import br.com.fiap.sociallearn.viewmodel.login.LoginViewModel
 import org.koin.androidx.viewmodel.ext.android.viewModel
@@ -28,9 +29,6 @@ class LoginActivity : AppCompatActivity(), LoginContract {
         viewModel.onCreate()
     }
 
-    override fun onStart() {
-        super.onStart()
-    }
 
     override fun goToMainActivity() {
         startActivity(Intent(this, HomeActivity::class.java))
@@ -44,10 +42,11 @@ class LoginActivity : AppCompatActivity(), LoginContract {
         startActivity(Intent(this, ResetPasswordActivity::class.java))
     }
 
-    override fun showMessage(resId: Int) {
-        if (resId == R.string.ERROR_NULL_LOGIN) {
+    @SuppressLint("SetTextI18n")
+    override fun showMessage(resIdMsgLogin: Int) {
+        if (resIdMsgLogin == R.string.ERROR_NULL_LOGIN) {
            binding.tvError.text = "E-mail e senha precisam estar preenchidos!"
         }
-        UtilToast.showMessage(this, resId);
+        UtilToast.showMessage(this, resIdMsgLogin)
     }
 }

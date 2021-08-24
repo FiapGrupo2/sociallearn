@@ -35,17 +35,17 @@ class SignUpActivity : AppCompatActivity(), SignUpContract {
     }
 
     @SuppressLint("SetTextI18n")
-    override fun showMessage(resId: Int) {
-        if (resId == R.string.ERROR_NULL_SIGN) {
+    override fun showMessage(resIdMsg: Int) {
+        if (resIdMsg == R.string.ERROR_NULL_SIGN) {
             binding.tvError.text = "Todos os campos precisam estar preenchido!"
         }
-        if (resId == R.string.ERROR_DIF_PASS) {
+        if (resIdMsg == R.string.ERROR_DIF_PASS) {
             binding.tvError.text = "As senhas digitadas não são iguais"
         }
-        if (resId == R.string.ERROR_EMAIL_INVALIDO) {
+        if (resIdMsg == R.string.ERROR_EMAIL_INVALIDO) {
             binding.tvError.text = "E-mail invalído!"
         }
 
-        UtilToast.showMessage(this, resId)
+        UtilToast.showMessage(this, resIdMsg)
     }
 }

@@ -28,8 +28,8 @@ class KnowledgeToTeachActivity : AppCompatActivity(), KnowledgeToTeachContract {
         startActivity(Intent(this, HomeActivity::class.java))
     }
 
-    override fun showMessage(resId: Int) {
-        UtilToast.showMessage(this, resId);
+    override fun showMessage(resIdMsg: Int) {
+        UtilToast.showMessage(this, resIdMsg)
     }
 
 }

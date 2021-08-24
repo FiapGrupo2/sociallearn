@@ -71,7 +71,7 @@ open class BaseActivity : AppCompatActivity(), BaseContract {
         startActivity(Intent(this, LoginActivity::class.java))
     }
 
-    override fun showMessage(resId: Int) {
-        UtilToast.showMessage(this, resId);
+    override fun showMessage(resIdMsg: Int) {
+        UtilToast.showMessage(this, resIdMsg)
     }
 }

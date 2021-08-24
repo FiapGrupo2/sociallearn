@@ -27,7 +27,7 @@ class KnowledgeToLearnActivity : AppCompatActivity(), KnowledgeToLearnContract {
         startActivity(Intent(this, KnowledgeToTeachActivity::class.java))
     }
 
-    override fun showMessage(resId: Int) {
-        UtilToast.showMessage(this, resId);
+    override fun showMessage(resIdMsg: Int) {
+        UtilToast.showMessage(this, resIdMsg)
     }
 }
